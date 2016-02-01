@@ -17,7 +17,7 @@ app.config(function($routeProvider, $locationProvider) {
 
         // direct donation page
         .when('/don', {
-            templateUrl: 'views/direct-domation.php',
+            templateUrl: 'views/donation.php',
             controller: 'directDonationCtrl'
         })
 

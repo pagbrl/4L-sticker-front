@@ -15,7 +15,7 @@ app.controller('homeCtrl', function($scope, $rootScope) {
 
 // direct donation controller
 app.controller('directDonationCtrl', function($scope, $rootScope) {
-    $rootScope.bodyClass = 'page-directDonation';
+    $rootScope.bodyClass = 'page-direct-donation';
     $rootScope.pageTitle = '4L Front | Faire un don';
 });
 

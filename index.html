@@ -14,8 +14,8 @@
         <link rel="icon" href="../assets/img/favicon.png" type="image/png">
 
         <!-- CSS -->
-        <link rel="stylesheet" href="../assets/css/normalize.css">
-        <link rel="stylesheet" href="../assets/css/main.css">
+        <link rel="stylesheet" href="assets/css/normalize.css">
+        <link rel="stylesheet" href="assets/css/main.css">
         
         <!-- JS -->
         <script src="../assets/js/dist/vendors.js"></script>
@@ -42,10 +42,12 @@
         <!-- ANALYTICS -->
     </head>
 
-    <body class="{{ bodyClass }}" ng-animate>
+    <body class="{{ bodyClass }}" ng-animate="{enter: 'animate-enter', leave: 'animate-leave'}">
         <header>
             <ul>
                 <li><a href="/">Home</a></li>
+                <li><a href="/don">Don</a></li>
+                <li><a href="/sticker">Sticker</a></li>
             </ul>
         </header>
         

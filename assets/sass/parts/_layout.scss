@@ -1,0 +1,30 @@
+* {
+    box-sizing: border-box;
+}
+
+body, html {
+    overflow-x: hidden;
+    min-height: 100vh;
+    min-width: 100vw;
+}
+
+body {
+    position: relative;
+    background: $grey url(../img/pattern.png) repeat;
+    background-size: 80px 80px;
+
+    &:before {
+        display: block;
+        content: '';
+        position: absolute;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background: $dark;
+        height: 100%;
+        width: 100%;
+        max-width: 0%;
+        transition: all ease .25s;
+    }
+}
+
