@@ -1,21 +1,21 @@
 .ng-leave {
-    &:before {
-        // animation: pageLeave 1s both;
-        // animation-delay: 0;
-    }
+    animation: pageLeave .25s both;
+    animation-delay: 0;
 }
 
 .ng-enter {
-    // animation: pageEnter .25s both;
-    // animation-delay: .8s;
+    animation: pageEnter .25s both;
+    animation-delay: .3s;
 }
 
 // Keyframes
 @keyframes pageLeave {
-    0% {max-width: 0%;}
-    25% {max-width: 100%; right: 0; left: auto;}
-    75% {max-width: 100%; right: 0; left: auto;}
-    100% {max-width: 0%; right: 0; left: auto;}
+    0% {opacity: 1;}
+    100% {opacity: 0;}
+    // 0% {max-width: 0%;}
+    // 25% {max-width: 100%; right: 0; left: auto;}
+    // 75% {max-width: 100%; right: 0; left: auto;}
+    // 100% {max-width: 0%; right: 0; left: auto;}
 }
 
 @keyframes pageEnter {
