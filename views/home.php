@@ -1,2 +1,6 @@
 home page
-<button>test</button>
+<br>
+
+<a href="#" class="btn">
+    Faire imprimer mon sticker
+</a>
