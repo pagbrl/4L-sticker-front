@@ -5,11 +5,69 @@
     background: $light;
 
     .content--left {
+        position: relative;
         float: left;
         width: 67%;
         min-height: 100vh;
         background: url('../img/bgHome.png');
         background-size: cover;
+      
+      .left--container {
+        margin: 0 auto;
+        width: 100%;
+        max-width: 900px;
+        padding: 30px;
+        height:100%;
+        
+        .vCenter {
+          height: 100%;
+          display:inline-block;
+          vertical-align:top;
+        }
+        
+        .vCenter:before {
+          content: "";
+          display: inline-block;
+          vertical-align: middle;
+          height:100%;
+        }
+        
+        img {
+          max-width: 300px;
+          width: 25%;
+          vertical-align:middle;
+          display:inline-block;
+        }
+        
+        .left--info {
+          max-width: 520px;
+          width: 65%;
+          margin-left: 60px;
+          vertical-align:middle;
+          display:inline-block;
+          
+          h1 {
+            color: $light;
+            font-size: 25px;
+            font-family : $quicksand;
+            line-height: 35px;
+            margin: 0 0 30px;
+          }
+          
+          p {
+            color: $grey;
+          }
+          
+          .btn {
+            margin-top: 30px;
+          }
+          
+          a:last-child {
+            margin: 45px 25px 0 30px;
+          }
+          
+        }
+      }
     }
 
     .content--right {
