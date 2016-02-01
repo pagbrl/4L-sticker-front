@@ -38,7 +38,7 @@
             margin-bottom: 10px;
         }
 
-        &.choose--view {
+        &.choose-view {
             > div {
                 a {
                     float: left;
@@ -122,11 +122,13 @@
                         height: 25px;
                         border-radius: 25px;
                         border: 2px solid $dark2;
-                        transition: all $bezier .25s;
+                        opacity: .45;
+                        transition: all $bezier .15s;
 
                         &.active {
                             border: 2px solid transparent;
-                            transition: all $bezier .25s;
+                            opacity: 1;
+                            transition: all $bezier .15s;
                         }
 
                         &.yellow {

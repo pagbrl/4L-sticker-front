@@ -23,13 +23,59 @@ app.controller('directDonationCtrl', function($scope, $rootScope) {
 app.controller('stickerCtrl', function($scope, $rootScope) {
     $rootScope.bodyClass = 'page-sticker';
     $rootScope.pageTitle = '4L Front | Personnalise ton sticker';
+    
+    var sticker = {
+        view: 0,
+        colors: ["FFFFFF","FFFFFF","FFFFFF"],
+        message: "",
+        name: "",
+    };
+
+    $scope.colorPickerNames = ["Carrosserie","Pare-brise","Phares"];
 
     $scope.chooseView = function(view){
-        var domElem = $('.choose--view > div > a.'+view+'');
+        var domElem = $('.choose-view > div > a.'+view+'');
         
         domElem.addClass('active');
         domElem.siblings().removeClass('active');
+
+        switch(view) {
+            case "face":
+                sticker.view = 0;
+                $scope.colorPickerNames = ["Carrosserie","Pare-brise","Phares"];
+                break;
+            case "profil":
+                sticker.view = 1;
+                $scope.colorPickerNames = ["Carrosserie","Vitres","Jantes"];
+                break;
+        }
     };
+
+    $scope.chooseColor = function(picker, color){
+        var domElem = $('.choose-color > div > article.'+picker+' > .picker> a.'+color+'');
+        
+        domElem.addClass('active');
+        domElem.siblings().removeClass('active');
+
+        switch(color) {
+            case "yellow":
+                sticker.colors[picker] = "#F7D14F";
+                break;
+            case "red":
+                sticker.colors[picker] = "#D84D4D";
+                break;
+            case "green":
+                sticker.colors[picker] = "#A6F574";
+                break;
+            case "blue":
+                sticker.colors[picker] = "#90D8FC";
+                break;
+            case "white":
+                sticker.colors[picker] = "#FFFFFF";
+                break;
+        }
+    };
+
 });
 
 // about controller

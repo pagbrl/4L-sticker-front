@@ -1,6 +1,6 @@
 <section class="sticker-template">
     <div class="content--left">
-        <section class="custom-sticker choose--view">
+        <section class="custom-sticker choose-view">
             <h4>L'angle de vue</h4>
             <div>
                 <a href="" class="face active" ng-click="chooseView('face')">
@@ -21,34 +21,34 @@
         <section class="custom-sticker choose-color">
             <h4>Les couleurs</h4>
             <div>
-                <article class="color-picker">
-                    <span>Carrosserie</span>
+                <article class="color-picker 0">
+                    <span>{{colorPickerNames[0]}}</span>
                     <div class="picker">
-                        <a class="yellow" href=""></a>
-                        <a class="red" href=""></a>
-                        <a class="green" href=""></a>
-                        <a class="blue" href=""></a>
-                        <a class="white active" href=""></a>
+                        <a ng-click="chooseColor(0,'yellow')" class="yellow" href=""></a>
+                        <a ng-click="chooseColor(0,'red')" class="red" href=""></a>
+                        <a ng-click="chooseColor(0,'green')" class="green" href=""></a>
+                        <a ng-click="chooseColor(0,'blue')" class="blue" href=""></a>
+                        <a ng-click="chooseColor(0,'white')" class="white" href=""></a>
                     </div>
                 </article>
-                <article class="color-picker">
-                    <span>Pare-brise</span>
+                <article class="color-picker 1">
+                    <span>{{colorPickerNames[1]}}</span>
                     <div class="picker">
-                        <a class="yellow" href=""></a>
-                        <a class="red" href=""></a>
-                        <a class="green" href=""></a>
-                        <a class="blue" href=""></a>
-                        <a class="white active" href=""></a>
+                        <a ng-click="chooseColor(1,'yellow')" class="yellow" href=""></a>
+                        <a ng-click="chooseColor(1,'red')" class="red" href=""></a>
+                        <a ng-click="chooseColor(1,'green')" class="green" href=""></a>
+                        <a ng-click="chooseColor(1,'blue')" class="blue" href=""></a>
+                        <a ng-click="chooseColor(1,'white')" class="white" href=""></a>
                     </div>
                 </article>
-                <article class="color-picker">
-                    <span>Phares</span>
+                <article class="color-picker 2">
+                    <span>{{colorPickerNames[2]}}</span>
                     <div class="picker">
-                        <a class="yellow" href=""></a>
-                        <a class="red" href=""></a>
-                        <a class="green" href=""></a>
-                        <a class="blue" href=""></a>
-                        <a class="white active" href=""></a>
+                        <a ng-click="chooseColor(2,'yellow')" class="yellow" href=""></a>
+                        <a ng-click="chooseColor(2,'red')" class="red" href=""></a>
+                        <a ng-click="chooseColor(2,'green')" class="green" href=""></a>
+                        <a ng-click="chooseColor(2,'blue')" class="blue" href=""></a>
+                        <a ng-click="chooseColor(2,'white')" class="white" href=""></a>
                     </div>
                 </article>
             </div>
