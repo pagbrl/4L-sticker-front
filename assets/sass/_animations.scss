@@ -1,13 +1,13 @@
 .ng-leave {
     &:before {
-        animation: pageLeave 1s both;
-        animation-delay: 0;
+        // animation: pageLeave 1s both;
+        // animation-delay: 0;
     }
 }
 
 .ng-enter {
-    animation: pageEnter .25s both;
-    animation-delay: .8s;
+    // animation: pageEnter .25s both;
+    // animation-delay: .8s;
 }
 
 // Keyframes
