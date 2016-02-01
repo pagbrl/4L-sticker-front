@@ -17,7 +17,8 @@
         right: 0;
         width: 33%;
         background: $dark;
-        padding: 40px;
+        padding: 0 40px;
+        padding-bottom: 0;
         height: auto;
         min-height: 100vh;
 
@@ -48,9 +49,19 @@
         }
     }
 
+    .right-scrollable-zone {
+        position: relative;
+        width: 100%;
+        padding-top: 40px;
+        max-height: calc(100vh);
+        overflow-y: scroll;
+    }
+
     .instagram-flux {
+        position: relative;
         background: $dark;
         width: 100%;
+        max-height: 100%;
         padding: 0;
         margin: 0;
         margin-bottom: 40px;
@@ -84,6 +95,54 @@
                 display: block;
                 max-width: 100%;
             }
+        }
+    }
+
+    .is-scrollable {
+        position: absolute;
+        z-index: 5;
+        bottom: 35px;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 100px;
+        background: linear-gradient(to top, $black, rgba($black,.0));
+
+        span {
+            position: absolute;
+            color: rgba($yellow,.9);
+            text-align: center;
+            bottom: -15px;
+            left: 50%;
+            height: 30px;
+            transform: translate3d(-50%,0,0);
+            margin: 0;
+
+            svg {
+                display: inline-block;
+                vertical-align: top;
+                max-height: 30px;
+                margin-right: 10px;
+            }
+
+            p {
+                margin: 0;
+                display: inline-block;
+                vertical-align: top;
+                height: 30px;
+                line-height: 30px;
+            }
+        }
+
+        &:before {
+            position: absolute;
+            display: block;
+            content: '';
+            height: 35px;
+            width: 100%;
+            left: 0;
+            bottom: -35px;
+            background: $black;
         }
     }
 }
