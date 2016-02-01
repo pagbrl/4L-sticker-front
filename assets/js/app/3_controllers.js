@@ -23,6 +23,13 @@ app.controller('directDonationCtrl', function($scope, $rootScope) {
 app.controller('stickerCtrl', function($scope, $rootScope) {
     $rootScope.bodyClass = 'page-sticker';
     $rootScope.pageTitle = '4L Front | Personnalise ton sticker';
+
+    $scope.chooseView = function(view){
+        var domElem = $('.choose--view > div > a.'+view+'');
+        
+        domElem.addClass('active');
+        domElem.siblings().removeClass('active');
+    };
 });
 
 // about controller
