@@ -84,8 +84,6 @@ app.controller('stickerCtrl', function($scope, $rootScope) {
     $scope.chooseName = function(){
         var name = $('#sticker-name').val();
         sticker.name = name;
-
-        console.log(sticker);
     }
 
 });
