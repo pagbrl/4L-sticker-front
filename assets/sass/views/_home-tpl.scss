@@ -1,0 +1,44 @@
+.home-template {
+    min-width: 100vw;
+    min-height: 100vh;
+    background: $light;
+
+    .content--left {
+        float: left;
+        width: 67%;
+    }
+
+    .content--right {
+        float: left;
+        width: 33%;
+        background: $dark;
+        padding: 40px;
+        min-height: 100vh;
+
+        header {
+            position: relative;
+            padding-bottom: 50px;
+            width: 100%;
+
+            h2 {
+                position: relative;
+                z-index: 2;
+                color: $yellow;
+                font-size: 25px;
+                font-family: $quicksand;
+                margin: 0;
+            }
+
+            span.hashtag {
+                z-index: 1;
+                position: absolute;
+                bottom: -4px;
+                color: rgba($light,.1);
+                text-transform: uppercase;
+                font-family: $roboto;
+                font-weight: 900;
+                font-size: 65px;
+            }
+        }
+    }
+}

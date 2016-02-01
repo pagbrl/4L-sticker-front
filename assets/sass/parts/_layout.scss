@@ -10,7 +10,7 @@ body, html {
 
 body {
     position: relative;
-    background: $grey url(../img/pattern.png) repeat;
+    background: $grey url(../img/pattern.png) repeat center;
     font-family: $roboto;
     background-size: 80px 80px;
     line-height: 1.66;
@@ -28,6 +28,16 @@ body {
         max-width: 0%;
         transition: all ease .25s;
     }
+
+    > main {
+        min-height: 100vh;
+        width: 100vw;
+    }
+}
+
+.clear {
+    display: block;
+    clear: both;
 }
 
 a {
