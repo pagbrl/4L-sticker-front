@@ -11,8 +11,33 @@ app.config(function($routeProvider, $locationProvider) {
     $routeProvider
         // home page
         .when('/', {
-            templateUrl: 'views/home.html',
+            templateUrl: 'views/home.php',
             controller: 'homeCtrl'
+        })
+
+        // direct donation page
+        .when('/don', {
+            templateUrl: 'views/direct-domation.php',
+            controller: 'directDonationCtrl'
+        })
+
+        // create sticker page
+        .when('/sticker', {
+            templateUrl: 'views/sticker.php',
+            controller: 'stickerCtrl'
+        })
+
+        // Other pages
+        // About page
+        .when('/a-propos', {
+            templateUrl: 'views/about.php',
+            controller: 'aboutCtrl'
+        })
+
+        // CGU page
+        .when('/CGU', {
+            templateUrl: 'views/cgu.php',
+            controller: 'cguCtrl'
         })
 
         .otherwise({'redirectTo':'/'});
