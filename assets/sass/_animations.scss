@@ -1,9 +1,9 @@
-.ng-leave {
+main.ng-leave {
     animation: pageLeave .25s both;
     animation-delay: 0;
 }
 
-.ng-enter {
+main.ng-enter {
     animation: pageEnter .25s both;
     animation-delay: .3s;
 }

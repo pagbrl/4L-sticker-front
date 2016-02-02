@@ -335,7 +335,7 @@
             background: $light;
             box-shadow: 0 0 20px rgba($black,.1);
             overflow: hidden;
-            transition: all ease .1s;
+            transition: all ease .5s;
 
             &:hover {
                 box-shadow: 0 20px 40px rgba($black,.15);
