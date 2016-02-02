@@ -45,8 +45,8 @@ app.controller('stickerCtrl', function($scope, $rootScope) {
     $scope.sticker = {
         view: 0,
         colors: ["FFFFFF","FFFFFF","FFFFFF"],
-        message: "",
-        name: "",
+        message: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum aperiam consequuntur ipsa nostrum fuga soluta dignissimos nisi deserunt culpa !",
+        name: "William",
     };
 
     // forbidden words for message/name textarea
@@ -80,19 +80,19 @@ app.controller('stickerCtrl', function($scope, $rootScope) {
 
         switch(color) {
             case "yellow":
-                $scope.sticker.colors[picker] = "#F7D14F";
+                $scope.sticker.colors[picker] = "F7D14F";
                 break;
             case "red":
-                $scope.sticker.colors[picker] = "#D84D4D";
+                $scope.sticker.colors[picker] = "D84D4D";
                 break;
             case "green":
-                $scope.sticker.colors[picker] = "#A6F574";
+                $scope.sticker.colors[picker] = "A6F574";
                 break;
             case "blue":
-                $scope.sticker.colors[picker] = "#90D8FC";
+                $scope.sticker.colors[picker] = "90D8FC";
                 break;
             case "white":
-                $scope.sticker.colors[picker] = "#FFFFFF";
+                $scope.sticker.colors[picker] = "FFFFFF";
                 break;
         }
     };
@@ -108,10 +108,16 @@ app.controller('stickerCtrl', function($scope, $rootScope) {
     }
 
     // Set sticker height + hover animation
-    $scope.setStickerHeight = function(){
+    $scope.setStickerStyle = function(){
         var sticker = $('#sticker-custom');
         var stickerWidth = sticker.width();
         var stickerHeight = stickerWidth/2.12;
+        
+        // Set scale 
+        var stickerContentScale = stickerWidth / 700;
+        $('#sticker-custom p').css('font-size', stickerContentScale*22+'px');
+        $('#sticker-custom span').css('font-size', stickerContentScale*35+'px');
+
         // Set height
         sticker.height(stickerHeight);
 
@@ -122,22 +128,22 @@ app.controller('stickerCtrl', function($scope, $rootScope) {
                     mouseScreenPositionX = e.pageX;
                     stickerLeftPosition = sticker.offset().left;
                     mousePosX = ((mouseScreenPositionX - stickerLeftPosition)/stickerWidth);
-                    matrix3dX = ((mousePosX/10000)*2)-0.0001;
+                    matrix3dX = ((mousePosX/10000)*1.5)-0.0001;
 
                     mouseScreenPositionY = e.pageY;
                     stickerTopPosition = sticker.offset().top;
                     mousePosY = ((mouseScreenPositionY - stickerTopPosition)/stickerHeight);
-                    matrix3dY = ((mousePosY/10000)*2.5)-0.0001;
+                    matrix3dY = ((mousePosY/10000)*1.65)-0.0001;
                     
                     sticker.css('transform', 'translate3d(0,-5px,0) matrix3d(1,0,0.00,'+matrix3dX+',0.00,1,0.00,'+matrix3dY+',0,0,1,0,0,0,0,1) scale(1.04)');
                 });
             })
             .mouseout(function(){
-                sticker.css('transform','translate3d(0,0,0) matrix3d(1,0,0.00,0.00,0.00,1,0.00,0,0,0,1,0,0,0,0,1) scale(1)');
+                sticker.css('transform','translate3d(0,0,0) matrix3d(1,0,0.00,0.00,0.00,1,0.00,0,0,0,1,0,0,0,0,1) scale('+stickerContentScale+')');
             });
     }
     $(window).on('resize', function(){
-        $scope.setStickerHeight();
+        $scope.setStickerStyle();
     })
 
 
