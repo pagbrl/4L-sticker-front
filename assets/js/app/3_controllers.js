@@ -165,6 +165,8 @@ app.controller('stickerCtrl', function($scope, $rootScope) {
     // Download sticker
     $scope.downloadSticker = function(){
         $scope.setLayout("download");
+
+        // TODO => SEND DATAS TO PAUL
     }
 
 });
