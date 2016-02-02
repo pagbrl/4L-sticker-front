@@ -15,6 +15,7 @@
     height: 100vh;
     max-height: 100vh;
     overflow-y: scroll;
+    box-shadow: 0 0 50px rgba($black,.5);
 
     @media screen and (min-width: $desktop-large) {
         width: 25%;
@@ -267,8 +268,10 @@
             }
 
             .content {
+                position: relative;
                 float: right;
                 width: 65%;
+                height: 100%;
                 padding: 30px;
                 transition: none;
 
@@ -279,6 +282,9 @@
                 }
 
                 .name {
+                    position: absolute;
+                    right: 30px;
+                    bottom: 20px;
                     text-align: right;
 
                     span {
