@@ -1,70 +1,11 @@
-// app.factory('instagram', ['$http',
-//         function($http) {
-//             return {
-//                 fetchPopular: function(callback) {
-
-//                     var endPoint = "https://api.instagram.com/v1/users/self/feed?access_token=2882344860.1fb234f.e492b874eaf9422db2473717abe5e2e7 &callback=JSON_CALLBACK";
-
-//                     $http.jsonp(endPoint).success(function(response) {
-//                         var gotInstagram = true;
-//                         callback(response.instagramData);
-//                     });
-//                 }
-//             }
-//         }
-//     ]);
-
-
 app.service('instagramService', function($http, $q){
   
   var JSONurl = "https://api.instagram.com/v1/users/self/feed?access_token=2882344860.1fb234f.e492b874eaf9422db2473717abe5e2e7";
   var promise = $q.defer();
-
+  
   var tempData = [];
   var instagramFlux = [];
-  var instagramFlux2 = [
-      {
-          name: "Lundi 12",
-          pictures : [
-              {
-                  url: "http://twitter.fr/",
-                  thumbnail_url: "http://lorempixel.com/560/560/",
-                  desc: "Coucou",
-              },
-              {
-                  url: "http://google.fr/",
-                  thumbnail_url: "http://lorempixel.com/560/560/",
-                  desc: "Coucou",
-              },
-              {
-                  url: "http://facebook.fr/",
-                  thumbnail_url: "http://lorempixel.com/560/560/",
-                  desc: "Coucou",
-              },
-          ]
-      },
-      {
-          name: "Dimanche 11",
-          pictures : [
-              {
-                  url: "http://twitter.fr/",
-                  thumbnail_url: "http://lorempixel.com/560/560/",
-                  desc: "Coucou",
-              },
-              {
-                  url: "http://google.fr/",
-                  thumbnail_url: "http://lorempixel.com/560/560/",
-                  desc: "Coucou",
-              },
-              {
-                  url: "http://facebook.fr/",
-                  thumbnail_url: "http://lorempixel.com/560/560/",
-                  desc: "Coucou",
-              },
-          ]
-      }
-  ]
-
+  
   this.getInstagramFlux = function(){
     
   $.ajax({
@@ -85,27 +26,27 @@ app.service('instagramService', function($http, $q){
         // Si la photo à une description ou non
         if (response.data[i].caption != null) {
           tempData[i] = {
-                name: curr_day + " " + m_names[curr_month],
-                pictures : [
-                {
-                url: response.data[i].link,
-                thumbnail_url: response.data[i].images.standard_resolution.url,
-                desc: response.data[i].caption.text,
-                }
-                ]
+            name: curr_day + " " + m_names[curr_month],
+            pictures : [
+              {
+              url: response.data[i].link,
+              thumbnail_url: response.data[i].images.standard_resolution.url,
+              desc: response.data[i].caption.text,
+              }
+            ]
           }
         } else {
           tempData[i] = {
-                name: curr_day + " " + m_names[curr_month],
-                pictures : [
-                {
-                  url: response.data[i].link,
-                  thumbnail_url: response.data[i].images.standard_resolution.url,
-                  desc: "",
+            name: curr_day + " " + m_names[curr_month],
+            pictures : [
+              {
+                url: response.data[i].link,
+                thumbnail_url: response.data[i].images.standard_resolution.url,
+                desc: "",
               }
-              ]
-            }
+            ]
           }
+        }
         
       }; // fin du for
       
@@ -125,15 +66,7 @@ app.service('instagramService', function($http, $q){
         if (foundName == false) {
           instagramFlux.push(tempData[i]);
         }
-        
       }
-      
-     // pour chaque element de objets
-       // obj_resultat crochet date de l'objet crochet PUSH element
-      // fin prour
-       console.log(instagramFlux);
-      
-      
       
       promise.resolve;  
     },

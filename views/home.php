@@ -12,7 +12,6 @@
 
             <a href="/sticker" class="btn">Créer mon sticker</a>
             <a href="/don">Faire un don à enfant du désert</a>
-
           </div>
         </div>
       </div>
