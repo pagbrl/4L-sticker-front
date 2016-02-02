@@ -148,8 +148,23 @@ app.controller('stickerCtrl', function($scope, $rootScope) {
         $scope.setStickerStyle();
     })
 
-    // Page step
+    // Page layout
+    $scope.layout = 'customize';
     $scope.pageH1 = 'Personnaliser mon sticker';
+
+    // Print sticker 
+    $scope.printSticker = function(){
+        $scope.pageH1 = 'Imprimer mon sticker';
+        $scope.layout = 'print';
+
+        // TODO => SEND DATAS TO PAUL
+    }
+
+    // Download sticker
+    $scope.downloadSticker = function(){
+        $scope.pageH1 = 'Télécharger mon sticker';
+        $scope.layout = 'download';
+    }
 
 });
 

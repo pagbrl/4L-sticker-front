@@ -313,19 +313,36 @@
                 </div>
             </div>
         </section>
-        <section class="action-panel">
+        <section class="action-panel" ng-if="layout === 'customize'">
             <div class="panel-cta">
-                <a href="" class="btn">
+                <a href="" class="btn" ng-click="printSticker()">
                     Faire imprimer mon sticker sur la 4L
                 </a>
                 <p>En faisant une donation à l’association les Enfants du Désert</p>
             </div>
             <div class="panel-cta">
-                <a href="" class="btn secondary">
+                <a href="" class="btn secondary" ng-click="downloadSticker()">
                     Télécharger mon sticker
                 </a>
                 <p>
                     Et le partager sur les réseaux sociaux
+                </p>
+            </div>
+        </section>
+
+        <section class="action-panel" ng-if="layout === 'print'">
+            <div class="panel-cta">
+                <a href="" class="btn" ng-click="printSticker()">
+                    NTM IMPRIME
+                </a>
+                <p>bite</p>
+            </div>
+            <div class="panel-cta">
+                <a href="" class="btn secondary">
+                    Chatte
+                </a>
+                <p>
+                    schneck
                 </p>
             </div>
         </section>
