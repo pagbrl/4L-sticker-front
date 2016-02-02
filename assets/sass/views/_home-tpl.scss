@@ -124,7 +124,7 @@
         margin: 0;
         margin-bottom: 40px;
 
-        article.large {
+        article:first-child{
             width: 100%;
             padding: 0;
             margin: 0;
@@ -136,7 +136,7 @@
             }
         }
 
-        article.mini {
+        article {
             float: left;
             width: 50%;
             padding: 20px;
@@ -152,6 +152,10 @@
             img {
                 display: block;
                 max-width: 100%;
+            }
+          
+            p {
+              display: none;
             }
         }
     }
