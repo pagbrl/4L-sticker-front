@@ -79,6 +79,8 @@ app.controller('stickerCtrl', function($scope, $rootScope) {
     $scope.chooseMessage = function(){
         var message = $('#sticker-message').val();
         sticker.message = message;
+
+        console.log(sticker);
     }
 
     $scope.chooseName = function(){

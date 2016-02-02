@@ -55,11 +55,11 @@
         </section>
         <section class="custom-sticker choose-message">
             <h4>Votre message</h4>
-            <textarea ng-keypress="chooseMessage()" name="" id="sticker-message" maxlength="100" placeholder="Entrez un message"></textarea>
+            <textarea ng-keyup="chooseMessage()" name="" id="sticker-message" maxlength="100" placeholder="Entrez un message"></textarea>
         </section>
         <section class="custom-sticker choose-name">
             <h4>Votre prénom</h4>
-            <textarea ng-keypress="chooseName()" name="" id="sticker-name" maxlength="25" placeholder="Entrez votre prénom"></textarea>
+            <textarea ng-keyup="chooseName()" name="" id="sticker-name" maxlength="25" placeholder="Entrez votre prénom"></textarea>
         </section>
     </div>
     <div class="content--right">
