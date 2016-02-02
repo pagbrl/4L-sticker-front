@@ -1,8 +1,8 @@
 .sticker-template {
     position: relative;
     width: 100vw;
-    height: 100vh;
-    background: $grey url(../img/pattern.png) repeat center;
+    min-height: 100vh;
+    background: $grey url(../img/pattern.png) repeat top center;
     background-size: 80px 80px;
 }
 
@@ -12,8 +12,8 @@
     width: 35%;
     background: $dark;
     padding: 30px 30px;
-    height: 100vh;
-    max-height: 100vh;
+    height: 100%;
+    min-height: 100vh;
     overflow-y: scroll;
     box-shadow: 0 0 50px rgba($black,.5);
 
@@ -202,6 +202,7 @@
 .content--right {
     float: left;
     width: 65%;
+    height: 100%;
     min-height: 100vh;
 
     @media screen and (min-width: $desktop-large) {
