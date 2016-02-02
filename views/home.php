@@ -18,49 +18,17 @@
       </div>
     </div>
     <div class="content--right">
-        <div class="right-scrollable-zone">
+        <div class="right-scrollable-zone" ng-show="gotInstagram">
             <header>
                 <h2>La journée d'hier</h2>
                 <span class="hashtag">#MPGAZL</span>
             </header>
-            <div class="instagram-flux">
-                <article class="large">
-                    <img src="http://lorempixel.com/560/560" alt="">
+            <div class="instagram-flux" ng-repeat="pic in pics">
+                <article>
+                   <a href="{{pic.link}}" target="_blank">
+                    <img ng-src="{{pic.images.standard_resolution.url}}" alt="">
+                   </a>
                 </article>
-                <article class="mini">
-                    <img src="http://lorempixel.com/260/260" alt="">
-                </article>
-                <article class="mini">
-                    <img src="http://lorempixel.com/260/260" alt="">
-                </article>
-                <article class="mini">
-                    <img src="http://lorempixel.com/260/260" alt="">
-                </article>
-                <article class="mini">
-                    <img src="http://lorempixel.com/260/260" alt="">
-                </article>
-                <div class="clear"></div>
-            </div>
-            <header>
-                <h2>Lundi 12</h2>
-            </header>
-            <div class="instagram-flux">
-                <article class="large">
-                    <img src="http://lorempixel.com/560/560" alt="">
-                </article>
-                <article class="mini">
-                    <img src="http://lorempixel.com/260/260" alt="">
-                </article>
-                <article class="mini">
-                    <img src="http://lorempixel.com/260/260" alt="">
-                </article>
-                <article class="mini">
-                    <img src="http://lorempixel.com/260/260" alt="">
-                </article>
-                <article class="mini">
-                    <img src="http://lorempixel.com/260/260" alt="">
-                </article>
-                <div class="clear"></div>
             </div>
         </div>
         <div class="is-scrollable">
