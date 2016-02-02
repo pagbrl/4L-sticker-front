@@ -75,7 +75,8 @@ app.service('instagramService', function($http, $q){
     }
     });
     
-    return instagramFlux; 
+    return instagramFlux;
+     
   };
   
 });

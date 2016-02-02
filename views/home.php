@@ -23,7 +23,7 @@
                     <h2>{{day.name}}</h2>
                 </header>
                 <div class="instagram-flux">
-                    <article class="mini" ng-repeat="picture in day.pictures">
+                    <article ng-repeat="picture in day.pictures">
                         <article>
                             <a target="_blank" href="{{picture.url}}">
                                 <img ng-src="{{picture.thumbnail_url}}" alt="">
