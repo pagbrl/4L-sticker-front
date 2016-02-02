@@ -57,6 +57,7 @@ app.service('instagramService', function($http, $q){
         for (j=0 ; j<instagramFlux.length ; j++) {
           if (instagramFlux[j].name == tempData[i].name){
             instagramFlux[j].pictures.push(tempData[i].pictures[0]);
+            foundName = true;
             break;
           } else {
             foundName = false;
