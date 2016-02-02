@@ -30,8 +30,8 @@ app.controller('stickerCtrl', function($scope, $rootScope) {
     $scope.sticker = {
         view: 0,
         colors: ["FFFFFF","FFFFFF","FFFFFF"],
-        message: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum aperiam consequuntur ipsa nostrum fuga soluta dignissimos nisi deserunt culpa !",
-        name: "William",
+        message: "Votre message",
+        name: "Votre prénom",
     };
 
     // forbidden words for message/name textarea
