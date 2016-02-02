@@ -14,19 +14,6 @@ app.controller('homeCtrl', function($scope, $rootScope, instagramService) {
 
     $scope.instagramFlux = instagramService.getInstagramFlux();
 
-    // $scope.pics = [];
-    
-    // $scope.getMore = function() {
-    // instagram.getInstagramData(function(instagramData) {
-    //     for(var i=0; i<instagramData.length; i++) {
-    //       if (typeof $scope.have[instagramData[i].id]==="undefined") {
-    //         $scope.pics.push(instagramData[i]) ;
-    //         $scope.have[instagramData[i].id] = "1";
-    //       }
-    //     }
-    // });
-    // };
-    // $scope.getMore();
 });
 
 // direct donation controller
