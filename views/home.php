@@ -18,17 +18,22 @@
       </div>
     </div>
     <div class="content--right">
-        <div class="right-scrollable-zone" ng-show="gotInstagram">
-            <header>
-                <h2>La journée d'hier</h2>
-                <span class="hashtag">#MPGAZL</span>
-            </header>
-            <div class="instagram-flux" ng-repeat="pic in pics">
-                <article>
-                   <a href="{{pic.link}}" target="_blank">
-                    <img ng-src="{{pic.images.standard_resolution.url}}" alt="">
-                   </a>
-                </article>
+        <div class="right-scrollable-zone">
+            <div ng-repeat="day in instagramFlux">
+                <header>
+                    <h2>{{day.name}}</h2>
+                </header>
+                <div class="instagram-flux">
+                    <article class="mini" ng-repeat="picture in day.pictures">
+                        <article>
+                            <a target="_blank" href="{{picture.url}}">
+                                <img src="{{picture.thumbnail_url}}" alt="">
+                                <!-- <p>{{picture.desc}}</p> -->
+                            </a>
+                        </article>
+                    </article>
+                    <div class="clear"></div>
+                </div>
             </div>
         </div>
         <div class="is-scrollable">
