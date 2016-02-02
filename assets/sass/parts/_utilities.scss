@@ -16,6 +16,26 @@
     background-color: $yellow2;
     transition: all $bezier .25s;
   }
+
+  &.social {
+    width: 50px;
+    padding: 0;
+    margin: 0 5px;
+    color: $light;
+    font-size: 120%;
+
+    &.facebook {
+      background-color: #3b5998;
+    }
+
+    &.twitter {
+      background-color: #55acee;
+    }
+
+    &.google {
+      background-color: #dc4e41;
+    }
+  }
 }
 
 .amount-input {

@@ -353,6 +353,28 @@
                 </a>
             </div>
         </section>
+        <section class="action-panel print" ng-if="layout === 'download'">
+            <h3>Télécharger mon sticker</h3>
+            <p>
+                Si vous ne souhaitez pas faire de dons à l'association Enfants du Désert, vous pouvez toujours soutenir Margaux et Pauline en partageant votre sticker sur les réseaux sociaux !
+            </p>
+            <div class="panel-cta">
+                <a href="" class="btn social facebook">
+                    <i class="fa fa-facebook"></i>
+                </a>
+                <a href="" class="btn social twitter">
+                    <i class="fa fa-twitter"></i>
+                </a>
+                <a href="" class="btn social google">
+                    <i class="fa fa-google"></i>
+                </a>
+            </div>
+            <div class="panel-cta">
+                <a href="" class="btn secondary">
+                    Télécharger
+                </a>
+            </div>
+        </section>
     </div>
     <div class="clear"></div>
 </section>
