@@ -82,6 +82,7 @@
                     img {
                         width: 100%;
                         display: block;
+                        filter: grayscale(100%);
                     }
                 }
             }
@@ -127,6 +128,11 @@
                         border: 2px solid $dark2;
                         opacity: .45;
                         transition: all $bezier .15s;
+
+                        &:hover {
+                            border: 2px solid transparent;
+                            transition: all $bezier .15s;
+                        }
 
                         &.active {
                             border: 2px solid transparent;

@@ -10,8 +10,8 @@
 
             <p>Pour participer, deux solutions : créez votre 4L personnalisée et affichez-la accompagnée d’un petit message sur la voiture de l’équipage. Vous pouvez également soutenir directement l’association en faisant un don.</p>
 
-            <a href="#" class="btn">Créer mon sticker</a>
-            <a href="#">Faire un don à enfant du désert</a>
+            <a href="/sticker" class="btn">Créer mon sticker</a>
+            <a href="/don">Faire un don à enfant du désert</a>
 
           </div>
         </div>

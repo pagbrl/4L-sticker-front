@@ -24,12 +24,16 @@ app.controller('stickerCtrl', function($scope, $rootScope) {
     $rootScope.bodyClass = 'page-sticker';
     $rootScope.pageTitle = '4L Front | Personnalise ton sticker';
     
+    // Init sticker obejct
     var sticker = {
         view: 0,
         colors: ["FFFFFF","FFFFFF","FFFFFF"],
         message: "",
         name: "",
     };
+
+    // forbidden words for message/name textarea
+    var bannedWords = ["bite","cul","chatte","chate","schneck","terroriste","teroriste"]
 
     $scope.colorPickerNames = ["Carrosserie","Pare-brise","Phares"];
 
@@ -80,7 +84,11 @@ app.controller('stickerCtrl', function($scope, $rootScope) {
         var message = $('#sticker-message').val();
         sticker.message = message;
 
-        console.log(sticker);
+        for (var i = 0; i < bannedWords.length; i++) {
+            var subString = bannedWords[i];
+            var subStringLength = subString.length;
+            message.indexOf(subString)
+        };
     }
 
     $scope.chooseName = function(){
