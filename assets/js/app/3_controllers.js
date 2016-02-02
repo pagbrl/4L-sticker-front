@@ -39,9 +39,10 @@ app.controller('directDonationCtrl', function($scope, $rootScope) {
 app.controller('stickerCtrl', function($scope, $rootScope) {
     $rootScope.bodyClass = 'page-sticker';
     $rootScope.pageTitle = '4L Front | Personnalise ton sticker';
+    $scope.pageH1 = 'Personnaliser mon sticker';
     
     // Init sticker obejct
-    var sticker = {
+    $scope.sticker = {
         view: 0,
         colors: ["FFFFFF","FFFFFF","FFFFFF"],
         message: "",
@@ -61,11 +62,11 @@ app.controller('stickerCtrl', function($scope, $rootScope) {
 
         switch(view) {
             case "face":
-                sticker.view = 0;
+                $scope.sticker.view = 0;
                 $scope.colorPickerNames = ["Carrosserie","Pare-brise","Phares"];
                 break;
             case "profil":
-                sticker.view = 1;
+                $scope.sticker.view = 1;
                 $scope.colorPickerNames = ["Carrosserie","Vitres","Jantes"];
                 break;
         }
@@ -79,40 +80,67 @@ app.controller('stickerCtrl', function($scope, $rootScope) {
 
         switch(color) {
             case "yellow":
-                sticker.colors[picker] = "#F7D14F";
+                $scope.sticker.colors[picker] = "#F7D14F";
                 break;
             case "red":
-                sticker.colors[picker] = "#D84D4D";
+                $scope.sticker.colors[picker] = "#D84D4D";
                 break;
             case "green":
-                sticker.colors[picker] = "#A6F574";
+                $scope.sticker.colors[picker] = "#A6F574";
                 break;
             case "blue":
-                sticker.colors[picker] = "#90D8FC";
+                $scope.sticker.colors[picker] = "#90D8FC";
                 break;
             case "white":
-                sticker.colors[picker] = "#FFFFFF";
+                $scope.sticker.colors[picker] = "#FFFFFF";
                 break;
         }
-
-        console.log(sticker);
     };
 
     $scope.chooseMessage = function(){
         var message = $('#sticker-message').val();
-        sticker.message = message;
-
-        for (var i = 0; i < bannedWords.length; i++) {
-            var subString = bannedWords[i];
-            var subStringLength = subString.length;
-            message.indexOf(subString)
-        };
+        $scope.sticker.message = message;
     }
 
     $scope.chooseName = function(){
         var name = $('#sticker-name').val();
-        sticker.name = name;
+        $scope.sticker.name = name;
     }
+
+    // Set sticker height + hover animation
+    $scope.setStickerHeight = function(){
+        var sticker = $('#sticker-custom');
+        var stickerWidth = sticker.width();
+        var stickerHeight = stickerWidth/2.12;
+        // Set height
+        sticker.height(stickerHeight);
+
+        // Generate animation
+        sticker
+            .mouseover(function(){
+                sticker.mousemove(function(e){
+                    mouseScreenPositionX = e.pageX;
+                    stickerLeftPosition = sticker.offset().left;
+                    mousePosX = ((mouseScreenPositionX - stickerLeftPosition)/stickerWidth);
+                    matrix3dX = ((mousePosX/10000)*2)-0.0001;
+
+                    mouseScreenPositionY = e.pageY;
+                    stickerTopPosition = sticker.offset().top;
+                    mousePosY = ((mouseScreenPositionY - stickerTopPosition)/stickerHeight);
+                    matrix3dY = ((mousePosY/10000)*2.5)-0.0001;
+                    
+                    sticker.css('transform', 'translate3d(0,-5px,0) matrix3d(1,0,0.00,'+matrix3dX+',0.00,1,0.00,'+matrix3dY+',0,0,1,0,0,0,0,1) scale(1.04)');
+                });
+            })
+            .mouseout(function(){
+                sticker.css('transform','translate3d(0,0,0) matrix3d(1,0,0.00,0.00,0.00,1,0.00,0,0,0,1,0,0,0,0,1) scale(1)');
+            });
+    }
+    $(window).on('resize', function(){
+        $scope.setStickerHeight();
+    })
+
+
 
 });
 

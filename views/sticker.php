@@ -28,7 +28,7 @@
                         <a ng-click="chooseColor(0,'red')" class="red" href=""></a>
                         <a ng-click="chooseColor(0,'green')" class="green" href=""></a>
                         <a ng-click="chooseColor(0,'blue')" class="blue" href=""></a>
-                        <a ng-click="chooseColor(0,'white')" class="white" href=""></a>
+                        <a ng-click="chooseColor(0,'white')" class="white active" href=""></a>
                     </div>
                 </article>
                 <article class="color-picker 1">
@@ -38,7 +38,7 @@
                         <a ng-click="chooseColor(1,'red')" class="red" href=""></a>
                         <a ng-click="chooseColor(1,'green')" class="green" href=""></a>
                         <a ng-click="chooseColor(1,'blue')" class="blue" href=""></a>
-                        <a ng-click="chooseColor(1,'white')" class="white" href=""></a>
+                        <a ng-click="chooseColor(1,'white')" class="white active" href=""></a>
                     </div>
                 </article>
                 <article class="color-picker 2">
@@ -48,7 +48,7 @@
                         <a ng-click="chooseColor(2,'red')" class="red" href=""></a>
                         <a ng-click="chooseColor(2,'green')" class="green" href=""></a>
                         <a ng-click="chooseColor(2,'blue')" class="blue" href=""></a>
-                        <a ng-click="chooseColor(2,'white')" class="white" href=""></a>
+                        <a ng-click="chooseColor(2,'white')" class="white active" href=""></a>
                     </div>
                 </article>
             </div>
@@ -63,6 +63,13 @@
         </section>
     </div>
     <div class="content--right">
-        
+        <header>
+            <h1>{{pageH1}}</h1>
+        </header>
+        <section class="the-sticker">
+            <div id="sticker-custom" ng-init="setStickerHeight()">
+                
+            </div>
+        </section>
     </div>
 </section>

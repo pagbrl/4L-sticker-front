@@ -11,13 +11,14 @@
     right: 0;
     width: 35%;
     background: $dark;
-    padding: 40px 30px;
-    height: auto;
+    padding: 30px 30px;
     height: 100vh;
+    max-height: 100vh;
+    overflow-y: scroll;
 
     @media screen and (min-width: $desktop-large) {
         width: 25%;
-        padding: 40px;
+        padding: 20px 40px;
     }
 
     .custom-sticker {
@@ -204,5 +205,39 @@
 
     @media screen and (min-width: $desktop-large) {
         width: 75%;
+    }
+
+    > header {
+        margin: 0;
+        padding-top: 30px;
+        width: 100%;
+        text-align: center;
+
+        h1 {
+            margin: 0;
+            text-transform: uppercase;
+            color: $dark;
+            font-size: 25px;
+            font-family: $quicksand;
+        }
+    }
+
+    section.the-sticker {
+        width: 100%;
+        padding: 4% 15%;
+
+        #sticker-custom {
+            width: 100%;
+            border-radius: 10px;
+            background: $light;
+            box-shadow: 0 0 20px rgba($black,.1);
+            transition: all ease .1s;
+
+            &:hover {
+                // matrix3d(1,0,0.00,-0.0001,0.00,1,0.00,0,0,0,1,0,0,0,0,1);
+                box-shadow: 0 20px 60px rgba($black,.25);
+                transition: all ease .1s;
+            }
+        }
     }
 }

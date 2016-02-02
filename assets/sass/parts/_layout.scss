@@ -48,34 +48,38 @@ a {
 }
 
 section.responsive {
+    position: relative;
     display: none;
+    height: 100vh;
+    width: 100vw;
+    background: $dark;
 
-    @media screen and (max-width: $desktop) {
-        position: relative;
-        display: block;
-        height: 100vh;
-        width: 100vw;
-        background: $dark;
-
-        > div {
-            position: absolute;
-            text-align: center;
-            top: 50%;
-            left: 50%;
-            transform: translate3d(-50%,-50%,0);
-            padding: 20px;
-            
-            h2 {
-                font-size: 60px;
-                font-weight: 900;
-                color: rgba($light,.1);
-                margin: 0;
-                margin-bottom: -30px;
-            }
-
-            p {
-                color: $light;
-            }
+    > div {
+        position: absolute;
+        text-align: center;
+        top: 50%;
+        left: 50%;
+        transform: translate3d(-50%,-50%,0);
+        padding: 20px;
+        
+        h2 {
+            font-size: 60px;
+            font-weight: 900;
+            color: rgba($light,.1);
+            margin: 0;
+            margin-bottom: -30px;
         }
+
+        p {
+            color: $light;
+        }
+    }
+
+    @media screen and (max-width: $desktop){
+        display: block;
+    }
+
+    @media screen and (max-height: 750px) {
+        display: block;
     }
 }
