@@ -39,7 +39,6 @@ app.controller('directDonationCtrl', function($scope, $rootScope) {
 app.controller('stickerCtrl', function($scope, $rootScope) {
     $rootScope.bodyClass = 'page-sticker';
     $rootScope.pageTitle = '4L Front | Personnalise ton sticker';
-    $scope.pageH1 = 'Personnaliser mon sticker';
     
     // Init sticker obejct
     $scope.sticker = {
@@ -52,8 +51,10 @@ app.controller('stickerCtrl', function($scope, $rootScope) {
     // forbidden words for message/name textarea
     var bannedWords = ["bite","cul","chatte","chate","schneck","terroriste","teroriste"]
 
+    // Picker labels by default (for view 0)
     $scope.colorPickerNames = ["Carrosserie","Pare-brise","Phares"];
 
+    // Customize sticker
     $scope.chooseView = function(view){
         var domElem = $('.choose-view > div > a.'+view+'');
         
@@ -147,7 +148,8 @@ app.controller('stickerCtrl', function($scope, $rootScope) {
         $scope.setStickerStyle();
     })
 
-
+    // Page step
+    $scope.pageH1 = 'Personnaliser mon sticker';
 
 });
 

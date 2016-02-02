@@ -244,13 +244,13 @@
 
         a.close-template {
             margin-bottom: 30px;
-            padding-top: 13px;
+            padding-top: 15px;
 
             svg {
                 display: inline-block;
                 vertical-align: top;
-                height: 26px;
-                width: 26px;
+                height: 22px;
+                width: 22px;
                 margin-right: 20px;
             }
 
@@ -260,9 +260,9 @@
                 font-family: $quicksand;
                 font-weight: bold;
                 font-size: 16px;
-                color: $light;
-                height: 26px;
-                line-height: 26px;
+                color: $black;
+                height: 22px;
+                line-height: 22px;
                 margin: 0;
             }
         }
@@ -273,7 +273,7 @@
         padding: 15%;
 
         @media screen and (min-width:$desktop-large) {
-            padding: 10% 15%;            
+            padding: 12% 15%;            
         }
 
         #sticker-custom {
@@ -349,7 +349,31 @@
 
     section.action-panel {
         width: 100%;
-        padding: 20px 15%;
+        padding: 20px;
         text-align: center;
+
+        .panel-cta {
+            display: inline-block;
+            padding: 0 20px;
+
+            .btn {
+                &.secondary {
+                    background-color: $light;
+
+                    &:hover {
+                        color: $dark;
+                        background-color: $grey2;
+                    }
+                }
+            }
+
+            p {
+                margin: 0;
+                margin-top: 10px;
+                font-style: italic;
+                font-weight: lighter;
+                font-size: 14px;
+            }
+        }
     }
 }

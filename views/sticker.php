@@ -70,7 +70,7 @@
                      x="0px" y="0px" width="24.2px" height="24.2px" viewBox="0 0 24.2 24.2" style="enable-background:new 0 0 24.2 24.2;"
                      xml:space="preserve">
                     <style type="text/css">
-                        .yellow{fill:#FFFFFF;}
+                        .yellow{fill:#000;}
                     </style>
                     <defs>
                     </defs>
@@ -314,7 +314,20 @@
             </div>
         </section>
         <section class="action-panel">
-            cc
+            <div class="panel-cta">
+                <a href="" class="btn">
+                    Faire imprimer mon sticker sur la 4L
+                </a>
+                <p>En faisant une donation à l’association les Enfants du Désert</p>
+            </div>
+            <div class="panel-cta">
+                <a href="" class="btn secondary">
+                    Télécharger mon sticker
+                </a>
+                <p>
+                    Et le partager sur les réseaux sociaux
+                </p>
+            </div>
         </section>
     </div>
 </section>
