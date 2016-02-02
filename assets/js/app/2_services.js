@@ -106,8 +106,17 @@ app.service('instagramService', function($http, $q){
       //On process les résultats
       
       // obj_resultat = objet vide var instagramFlux = [];
-      for (var i =0 ; i < resultTri.length ; i++) {           
-        instagramFlux.push(resultTri[i]); 
+      for (var i =0 ; i < resultTri.length ; i++) { 
+        
+        for (var j = 0 ; j < instagramFlux.length; j++){
+          
+          if (instagramFlux[j].name == resultTri[i].name){
+            instagramFlux[j].push(resultTri[i].pictures); 
+          } else {
+            instagramFlux.push(resultTri[i]); 
+          }
+          
+        }
         }
      // pour chaque element de objets
        // obj_resultat crochet date de l'objet crochet PUSH element
