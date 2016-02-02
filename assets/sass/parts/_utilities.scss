@@ -17,3 +17,58 @@
     transition: all $bezier .25s;
   }
 }
+
+.amount-input {
+  display: inline-block;
+  background-color: $light;
+  box-shadow: 0 0 20px rgba($black,.1);
+  border-radius: 3px;
+  height: 50px;
+  padding: 5px 20px;
+  transition: all $bezier .25s;
+
+  &:hover {
+    box-shadow: 0 0 40px rgba($black,.15);
+    transition: all $bezier .25s;
+  }
+
+  label {
+    display: inline-block;
+    height: 38px;
+    margin: 0;
+    line-height: 45px;
+    font-family: $quicksand;
+    text-transform: uppercase;
+    color: $dark;
+    font-size: 18px;
+    font-weight: bold;
+    padding-right: 20px;
+    border-right: 1px solid #D8D8D8;
+  }
+
+  input[type="number"] {
+    border: 0;
+    margin: 0;
+    background: transparent;
+    display: inline-block;
+    height: 40px;
+    line-height: 40px;
+    font-size: 20px;
+    font-family: $quicksand;
+    color: $yellow;
+    font-weight: bold;
+    text-align: right;
+    max-width: 90px;
+    outline: 0;
+  }
+
+  span {
+    font-family: $quicksand;
+    color: $yellow;
+    font-weight: bold;
+    font-size: 20px;
+    display: inline-block;
+    height: 40px;
+    line-height: 40px;
+  }
+}

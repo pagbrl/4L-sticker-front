@@ -1,5 +1,10 @@
-<section class="sticker-template">
+<section class="sticker-template" ng-init="setLayout('customize')">
     <div class="content--left">
+        <section class="overlay-customization" ng-if="layout != 'customize'">
+            <a href="" ng-click="setLayout('customize')">
+                Revenir à la personnalisation
+            </a>
+        </section>
         <section class="custom-sticker choose-view">
             <h4>L'angle de vue</h4>
             <div>
@@ -81,7 +86,7 @@
             </a>
             <h1>{{pageH1}}</h1>
         </header>
-        <section class="the-sticker">
+        <section class="the-sticker {{layout}}">
             <div id="sticker-custom" ng-init="setStickerStyle()">
                 <div class="sticker-main-content">
                     <div class="svg face" ng-if="sticker.view == 0">
@@ -330,20 +335,22 @@
             </div>
         </section>
 
-        <section class="action-panel" ng-if="layout === 'print'">
+        <section class="action-panel print" ng-if="layout === 'print'">
+            <h3>Imprimer mon sticker sur la 4L</h3>
+            <p>
+                Pour prendre part à l’aventure de Pauline et Margaux, soutenez l’association. Pour tout don supérieur à 3€ votre sticker sera imprimé par l’équipage sur place et collé sur la 4L !
+            </p>
             <div class="panel-cta">
-                <a href="" class="btn" ng-click="printSticker()">
-                    NTM IMPRIME
-                </a>
-                <p>bite</p>
+                <div class="amount-input">
+                    <label for="amount">Montant</label>
+                    <input type="number" id="amount" min="0" placeholder="3,00">
+                    <span>€</span>
+                </div>
             </div>
             <div class="panel-cta">
-                <a href="" class="btn secondary">
-                    Chatte
+                <a href="" class="btn">
+                    Faire un don
                 </a>
-                <p>
-                    schneck
-                </p>
             </div>
         </section>
     </div>

@@ -137,20 +137,35 @@ app.controller('stickerCtrl', function($scope, $rootScope) {
 
     // Page layout
     $scope.layout = 'customize';
-    $scope.pageH1 = 'Personnaliser mon sticker';
+
+    // Set layout 
+    $scope.setLayout = function(layout){
+        switch(layout){
+            case 'customize':
+                $scope.layout = 'customize';
+                $scope.pageH1 = 'Personnaliser mon sticker';
+                break;
+            case 'print':
+                $scope.layout = 'print';
+                $scope.pageH1 = 'Imprimer mon sticker';
+                break;
+            case 'download':
+                $scope.layout = 'download';
+                $scope.pageH1 = 'Télécharger mon sticker';
+                break;
+        }
+    }
 
     // Print sticker 
     $scope.printSticker = function(){
-        $scope.pageH1 = 'Imprimer mon sticker';
-        $scope.layout = 'print';
+        $scope.setLayout("print");
 
         // TODO => SEND DATAS TO PAUL
     }
 
     // Download sticker
     $scope.downloadSticker = function(){
-        $scope.pageH1 = 'Télécharger mon sticker';
-        $scope.layout = 'download';
+        $scope.setLayout("download");
     }
 
 });
