@@ -21,6 +21,7 @@
             <div ng-repeat="day in instagramFlux">
                 <header>
                     <h2>{{day.name}}</h2>
+                    <span class="hashtag">#MPGAZL</span>
                 </header>
                 <div class="instagram-flux">
                     <article ng-repeat="picture in day.pictures">
