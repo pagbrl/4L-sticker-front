@@ -20,6 +20,7 @@ app.service('instagramService', function($http, $q){
   var JSONurl = "https://api.instagram.com/v1/users/self/feed?access_token=2882344860.1fb234f.e492b874eaf9422db2473717abe5e2e7";
   var promise = $q.defer();
 
+  var tempData = [];
   var instagramFlux = [];
   var instagramFlux2 = [
       {
@@ -83,40 +84,50 @@ app.service('instagramService', function($http, $q){
         
         // Si la photo à une description ou non
         if (response.data[i].caption != null) {
-          tempData = {
+          tempData[i] = {
                 name: curr_day + " " + m_names[curr_month],
                 pictures : [
                 {
                 url: response.data[i].link,
                 thumbnail_url: response.data[i].images.standard_resolution.url,
                 desc: response.data[i].caption.text,
-                }]
-          };
-          tempData = {
+                }
+                ]
+          }
+        } else {
+          tempData[i] = {
                 name: curr_day + " " + m_names[curr_month],
                 pictures : [
                 {
-                url: response.data[i].link,
-                thumbnail_url: response.data[i].images.standard_resolution.url,
-                desc: "",
-                }]
-          };  
-        }
-        console.log(i);
-        console.log(tempData.name);
-        for (j=0 ; j<4; j++) {
-          console.log('fuck it'); 
-           if ('2 Février' == tempData.name){
-             console.log('ça marche');
-            instagramFlux[j].push(tempData.pictures); 
+                  url: response.data[i].link,
+                  thumbnail_url: response.data[i].images.standard_resolution.url,
+                  desc: "",
+              }
+              ]
+            }
+          }
+        
+      }; // fin du for
+      
+      //proccess les données
+      var foundName = true;
+      instagramFlux[0] = tempData[0];
+      for (i=1 ; i<tempData.length ; i++) {
+        for (j=0 ; j<instagramFlux.length ; j++) {
+          if (instagramFlux[j].name == tempData[i].name){
+            instagramFlux[j].pictures.push(tempData[i].pictures[0]);
+            break;
           } else {
-            console.log('fuck');
+            foundName = false;
           }
         }
         
-
-      }; // fin du for
-    
+        if (foundName == false) {
+          instagramFlux.push(tempData[i]);
+        }
+        
+      }
+      
      // pour chaque element de objets
        // obj_resultat crochet date de l'objet crochet PUSH element
       // fin prour

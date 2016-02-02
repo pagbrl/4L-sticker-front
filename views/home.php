@@ -27,8 +27,8 @@
                     <article class="mini" ng-repeat="picture in day.pictures">
                         <article>
                             <a target="_blank" href="{{picture.url}}">
-                                <img src="{{picture.thumbnail_url}}" alt="">
-                                <!-- <p>{{picture.desc}}</p> -->
+                                <img ng-src="{{picture.thumbnail_url}}" alt="">
+                                <p>{{picture.desc}}</p>
                             </a>
                         </article>
                     </article>
