@@ -115,6 +115,7 @@ app.controller('stickerCtrl', function($scope, $rootScope) {
         
         // Set scale 
         var stickerContentScale = stickerWidth / 700;
+        sticker.css('transform','translate3d(0,0,0) matrix3d(1,0,0.00,0.00,0.00,1,0.00,0,0,0,1,0,0,0,0,1) scale('+stickerContentScale+')');
         $('#sticker-custom p').css('font-size', stickerContentScale*22+'px');
         $('#sticker-custom span').css('font-size', stickerContentScale*35+'px');
 
@@ -135,7 +136,7 @@ app.controller('stickerCtrl', function($scope, $rootScope) {
                     mousePosY = ((mouseScreenPositionY - stickerTopPosition)/stickerHeight);
                     matrix3dY = ((mousePosY/10000)*1.65)-0.0001;
                     
-                    sticker.css('transform', 'translate3d(0,-5px,0) matrix3d(1,0,0.00,'+matrix3dX+',0.00,1,0.00,'+matrix3dY+',0,0,1,0,0,0,0,1) scale(1.04)');
+                    sticker.css('transform', 'translate3d(0,-5px,0) matrix3d(1,0,0.00,'+matrix3dX+',0.00,1,0.00,'+matrix3dY+',0,0,1,0,0,0,0,1) scale('+stickerContentScale*1.04+')');
                 });
             })
             .mouseout(function(){
