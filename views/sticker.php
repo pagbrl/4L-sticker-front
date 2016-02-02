@@ -64,6 +64,21 @@
     </div>
     <div class="content--right">
         <header>
+            <a href="/" class="close-template btn">
+                <svg version="1.1"
+                     xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"
+                     x="0px" y="0px" width="24.2px" height="24.2px" viewBox="0 0 24.2 24.2" style="enable-background:new 0 0 24.2 24.2;"
+                     xml:space="preserve">
+                    <style type="text/css">
+                        .yellow{fill:#FFFFFF;}
+                    </style>
+                    <defs>
+                    </defs>
+                    <polygon class="yellow" points="0,3 9.1,12.1 0,21.2 3,24.2 12.1,15.2 21.2,24.2 24.2,21.2 15.2,12.1 24.2,3 21.2,0 12.1,9.1 3,0 "/>
+                </svg>
+
+                <p>Revenir à l'acceuil</p>
+            </a>
             <h1>{{pageH1}}</h1>
         </header>
         <section class="the-sticker">
@@ -297,6 +312,9 @@
                     </div>
                 </div>
             </div>
+        </section>
+        <section class="action-panel">
+            cc
         </section>
     </div>
 </section>
