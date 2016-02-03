@@ -340,18 +340,16 @@
             <p>
                 Pour prendre part à l’aventure de Pauline et Margaux, soutenez l’association. Pour tout don supérieur à 3€ votre sticker sera imprimé par l’équipage sur place et collé sur la 4L !
             </p>
-            <div class="panel-cta">
+            <form action="./paypal/requestCheckout.php" method="GET">
+              <div class="panel-cta">
                 <div class="amount-input">
-                    <label for="amount">Montant</label>
-                    <input type="number" id="amount" min="0" placeholder="3,00">
-                    <span>€</span>
+                  <label for="amount">Montant</label>
+                  <input type="number" name="amount" id="amount" min="0" placeholder="3,00">
+                  <span>€</span>
                 </div>
-            </div>
-            <div class="panel-cta">
-                <a href="" class="btn">
-                    Faire un don
-                </a>
-            </div>
+              </div>
+              <input type="submit" value="Faire un don" class="btn">
+            </form>
         </section>
         <section class="action-panel print" ng-if="layout === 'download'">
             <h3>Télécharger mon sticker</h3>

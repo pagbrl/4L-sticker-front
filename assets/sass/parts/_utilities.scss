@@ -38,6 +38,23 @@
   }
 }
 
+input[type="submit"].btn {
+  display: inline-block;
+  border: 0;
+  font-family: $quicksand;
+  font-size: 14px;
+  font-weight: bold;
+  margin-left: 60px;
+  text-transform: uppercase;
+  background-color: $yellow;
+  outline: 0;
+
+  &:hover, &:focus {
+    background-color: $yellow2;
+    transition: all $bezier .25s;
+  }
+}
+
 .amount-input {
   display: inline-block;
   background-color: $light;

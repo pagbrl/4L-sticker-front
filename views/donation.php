@@ -25,14 +25,16 @@
   Votre don permettra de financer divers projets comme la construction d’écoles ou l’amélioration des conditions médicales des jeunes marocains.
       </p>
       <div class="don-input-btn">
-        <div class="panel-cta">
-          <div class="amount-input">
-            <label for="amount">Montant</label>
-            <input type="number" id="amount" min="0" placeholder="3,00">
-            <span>€</span>
+        <form action="./paypal/requestCheckout.php" method="GET">
+          <div class="panel-cta">
+            <div class="amount-input">
+              <label for="amount">Montant</label>
+              <input type="number" name="amount" id="amount" min="0" placeholder="3,00">
+              <span>€</span>
+            </div>
           </div>
-        </div>
-        <a href="#" class="btn">Faire un don</a>
+          <input type="submit" value="Faire un don" class="btn">
+        </form>
       </div>
     </div>
   </div>
