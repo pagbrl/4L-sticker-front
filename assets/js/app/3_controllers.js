@@ -37,6 +37,12 @@ app.controller('stickerCtrl', function($scope, $rootScope) {
     // forbidden words for message/name textarea
     var bannedWords = ["bite","cul","chatte","chate","schneck","terroriste","teroriste"]
 
+    // Delete Banned Words from string
+    $scope.delBannedWords = function(i,string){
+        var newString = string.replace(bannedWords[i],'');
+        return newString;
+    }
+
     // Picker labels by default (for view 0)
     $scope.colorPickerNames = ["Carrosserie","Pare-brise","Phares"];
 
@@ -85,12 +91,20 @@ app.controller('stickerCtrl', function($scope, $rootScope) {
     };
 
     $scope.chooseMessage = function(){
-        var message = $('#sticker-message').val();
+        var field = $('#sticker-message');
+        for (var i = 0; i < bannedWords.length; i++) {
+            var message = field.val();
+            field.val($scope.delBannedWords(i,message));
+        };
         $scope.sticker.message = message;
     }
 
     $scope.chooseName = function(){
-        var name = $('#sticker-name').val();
+        var field = $('#sticker-name');
+        for (var i = 0; i < bannedWords.length; i++) {
+            var name = field.val();
+            field.val($scope.delBannedWords(i,name));
+        };
         $scope.sticker.name = name;
     }
 
@@ -98,7 +112,7 @@ app.controller('stickerCtrl', function($scope, $rootScope) {
     $scope.setStickerStyle = function(){
         var sticker = $('#sticker-custom');
         var stickerWidth = sticker.width();
-        var stickerHeight = stickerWidth/2.12;
+        var stickerHeight = stickerWidth/2.10;
         
         // Set scale 
         var stickerContentScale = stickerWidth / 700;
