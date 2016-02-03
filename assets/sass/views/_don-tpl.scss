@@ -1,0 +1,94 @@
+.don-template {
+  
+  position: relative;
+  min-width: 100vw;
+  min-height: 100vh;
+  background: $dark url('../img/bgDon.png') no-repeat center center;
+  background-size: 100% auto;
+  
+  .don-go-home {
+    font-family: $quicksand;
+    position: absolute;
+    top: 30px;
+    left: 20px;
+    font-size: 20px;
+    
+    a {
+      color: $light;
+      transition: color ease-in-out 0.3s;
+      
+      g#Don-sans-sticker{
+        transition: fill ease-in-out 0.3s;
+      }
+      
+      &:hover {
+        color: $yellow;
+        
+        g#Don-sans-sticker{
+          fill: $grey;
+        }
+      }
+      
+      span {
+        vertical-align: 8px;
+      }
+      
+    }
+    
+    svg {
+      margin-right: 15px;
+    }
+    
+    
+  }
+  
+  .don-container {
+    
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate3d(-50%,-50%,0);
+    width: 600px;
+    height: 380px;
+    background-color: $dark2;
+    border-radius: 10px;
+    
+    >div {
+      padding:60px;
+      color: $light;
+      
+      h2 {
+        font-family: $quicksand;
+        font-size: 24px;
+        font-weight: bold;
+        margin: 0 0 35px;
+      }
+      
+      p {
+        color: $grey;
+        font-size: 14px;
+        padding-bottom: 35px;
+        
+        a {
+          color: $light;
+          text-decoration: underline;
+          font-weight: normal;
+        }
+        
+      }
+      
+      .don-input-btn {
+        
+        .panel-cta {
+          float:left;
+        }
+        
+        a {
+          float: right;
+        }
+        
+      }
+      
+    }
+  }
+}
