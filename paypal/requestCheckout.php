@@ -3,8 +3,12 @@ require 'paypalClass.php';
 
 if (isset($_GET["amount"])) {
     $amount = $_GET["amount"];
+
+    if ($amount <= 3) {
+        $amount = 3;
+    };
 } else {
-    $amount = 5;
+    $amount = 3;
 };
 
 $paypal = new Paypal();
