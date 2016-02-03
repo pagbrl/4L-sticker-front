@@ -29,9 +29,11 @@ app.controller('stickerCtrl', function($scope, $rootScope) {
     // Init sticker obejct
     $scope.sticker = {
         view: 0,
-        colors: ["FFFFFF","FFFFFF","FFFFFF"],
+        color_0: "FFFFFF",
+        color_1: "FFFFFF",
+        color_2: "FFFFFF",
         message: "Votre message",
-        name: "Votre prénom",
+        username: "Votre prénom",
     };
 
     // forbidden words for message/name textarea
@@ -73,21 +75,23 @@ app.controller('stickerCtrl', function($scope, $rootScope) {
 
         switch(color) {
             case "yellow":
-                $scope.sticker.colors[picker] = "F7D14F";
+                $scope.sticker[picker] = "F7D14F";
                 break;
             case "red":
-                $scope.sticker.colors[picker] = "D84D4D";
+                $scope.sticker[picker] = "D84D4D";
                 break;
             case "green":
-                $scope.sticker.colors[picker] = "A6F574";
+                $scope.sticker[picker] = "A6F574";
                 break;
             case "blue":
-                $scope.sticker.colors[picker] = "90D8FC";
+                $scope.sticker[picker] = "90D8FC";
                 break;
             case "white":
-                $scope.sticker.colors[picker] = "FFFFFF";
+                $scope.sticker[picker] = "FFFFFF";
                 break;
         }
+
+        console.log($scope.sticker);
     };
 
     $scope.chooseMessage = function(){
@@ -105,7 +109,7 @@ app.controller('stickerCtrl', function($scope, $rootScope) {
             var name = field.val();
             field.val($scope.delBannedWords(i,name));
         };
-        $scope.sticker.name = name;
+        $scope.sticker.username = name;
     }
 
     // Set sticker height + hover animation

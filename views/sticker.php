@@ -26,34 +26,34 @@
         <section class="custom-sticker choose-color">
             <h4>Les couleurs</h4>
             <div>
-                <article class="color-picker 0">
+                <article class="color-picker color_0">
                     <span>{{colorPickerNames[0]}}</span>
                     <div class="picker">
-                        <a ng-click="chooseColor(0,'yellow')" class="yellow" href=""></a>
-                        <a ng-click="chooseColor(0,'red')" class="red" href=""></a>
-                        <a ng-click="chooseColor(0,'green')" class="green" href=""></a>
-                        <a ng-click="chooseColor(0,'blue')" class="blue" href=""></a>
-                        <a ng-click="chooseColor(0,'white')" class="white active" href=""></a>
+                        <a ng-click="chooseColor('color_0','yellow')" class="yellow" href=""></a>
+                        <a ng-click="chooseColor('color_0','red')" class="red" href=""></a>
+                        <a ng-click="chooseColor('color_0','green')" class="green" href=""></a>
+                        <a ng-click="chooseColor('color_0','blue')" class="blue" href=""></a>
+                        <a ng-click="chooseColor('color_0','white')" class="white active" href=""></a>
                     </div>
                 </article>
-                <article class="color-picker 1">
+                <article class="color-picker color_1">
                     <span>{{colorPickerNames[1]}}</span>
                     <div class="picker">
-                        <a ng-click="chooseColor(1,'yellow')" class="yellow" href=""></a>
-                        <a ng-click="chooseColor(1,'red')" class="red" href=""></a>
-                        <a ng-click="chooseColor(1,'green')" class="green" href=""></a>
-                        <a ng-click="chooseColor(1,'blue')" class="blue" href=""></a>
-                        <a ng-click="chooseColor(1,'white')" class="white active" href=""></a>
+                        <a ng-click="chooseColor('color_1','yellow')" class="yellow" href=""></a>
+                        <a ng-click="chooseColor('color_1','red')" class="red" href=""></a>
+                        <a ng-click="chooseColor('color_1','green')" class="green" href=""></a>
+                        <a ng-click="chooseColor('color_1','blue')" class="blue" href=""></a>
+                        <a ng-click="chooseColor('color_1','white')" class="white active" href=""></a>
                     </div>
                 </article>
-                <article class="color-picker 2">
+                <article class="color-picker color_2">
                     <span>{{colorPickerNames[2]}}</span>
                     <div class="picker">
-                        <a ng-click="chooseColor(2,'yellow')" class="yellow" href=""></a>
-                        <a ng-click="chooseColor(2,'red')" class="red" href=""></a>
-                        <a ng-click="chooseColor(2,'green')" class="green" href=""></a>
-                        <a ng-click="chooseColor(2,'blue')" class="blue" href=""></a>
-                        <a ng-click="chooseColor(2,'white')" class="white active" href=""></a>
+                        <a ng-click="chooseColor('color_2','yellow')" class="yellow" href=""></a>
+                        <a ng-click="chooseColor('color_2','red')" class="red" href=""></a>
+                        <a ng-click="chooseColor('color_2','green')" class="green" href=""></a>
+                        <a ng-click="chooseColor('color_2','blue')" class="blue" href=""></a>
+                        <a ng-click="chooseColor('color_2','white')" class="white active" href=""></a>
                     </div>
                 </article>
             </div>
@@ -104,19 +104,19 @@
                         </defs>
                         <g>
                             <g>
-                                <path class="st0" style="fill: #{{sticker.colors[0]}}" d="M742.8,514.7c0,0,35-192.8-5.7-256.3c-40.7-63.5-107-70.6-107-70.6s111.3,25,140.6,97.8
+                                <path class="st0" style="fill: #{{sticker.color_0}}" d="M742.8,514.7c0,0,35-192.8-5.7-256.3c-40.7-63.5-107-70.6-107-70.6s111.3,25,140.6,97.8
                                     c29.3,72.8,20.7,182.2,0,233.4c-29.9,5.3-29.9,5.3-29.9,5.3L742.8,514.7z"/>
-                                <path class="st0" style="fill: #{{sticker.colors[0]}}" d="M695.5,214.9c-22.2-17.8-65.5-27.1-65.5-27.1l-90.9-6.2l-11.5,4.8c0,0-88.4-2.7-100.2-3.3
+                                <path class="st0" style="fill: #{{sticker.color_0}}" d="M695.5,214.9c-22.2-17.8-65.5-27.1-65.5-27.1l-90.9-6.2l-11.5,4.8c0,0-88.4-2.7-100.2-3.3
                                     c-8.2-6.1-23.9-6.9-23.9-6.9H401c0,0-15.7,0.8-23.9,6.9c-11.8,0.6-100.2,3.3-100.2,3.3l-11.5-4.9l-90.9,6.2
                                     c0,0-43.3,9.3-65.5,27.1c-22.2,17.8-68.3,47.6-60.4,182.6c7.3,78.5,15.2,126.9,15.2,126.9s152.4,27.1,338.4,20
                                     c186,7.1,338.4-20,338.4-20s7.9-48.4,15.2-126.9C763.9,262.4,717.8,232.6,695.5,214.9z"/>
-                                <path class="st0" style="fill: #{{sticker.colors[0]}}" d="M605.8,38.2C597.5,20.6,563,1.6,403.9,2.5C244.8,1.6,206,20.6,197.7,38.2c-8.3,17.6-45.1,149.7-45.1,149.7
+                                <path class="st0" style="fill: #{{sticker.color_0}}" d="M605.8,38.2C597.5,20.6,563,1.6,403.9,2.5C244.8,1.6,206,20.6,197.7,38.2c-8.3,17.6-45.1,149.7-45.1,149.7
                                     v5.7l21.5-5.8l81.7-7.5l21,6.1l95.2-3.1l32-6.8l28.4,6.8l95.3,3.1l21-6.1l81.1,7.5l20.8,5.8v-5.7
                                     C650.5,187.9,614.1,55.8,605.8,38.2z"/>
-                                <path class="st0" style="fill: #{{sticker.colors[0]}}" d="M61.8,514.7c0,0-35-192.8,5.7-256.3s107-70.6,107-70.6s-111.3,25-140.6,97.8s-20.7,182.2,0,233.4
+                                <path class="st0" style="fill: #{{sticker.color_0}}" d="M61.8,514.7c0,0-35-192.8,5.7-256.3s107-70.6,107-70.6s-111.3,25-140.6,97.8s-20.7,182.2,0,233.4
                                     c29.9,5.3,29.9,5.3,29.9,5.3L61.8,514.7z"/>
                             </g>
-                            <path class="st0" style="fill: #{{sticker.colors[0]}}" d="M788.8,512.4c0,0-2.3-5.2-4.5,3.5C667.1,544.9,400.8,543,400.8,543s-263.6,2-380.8-27.1
+                            <path class="st0" style="fill: #{{sticker.color_0}}" d="M788.8,512.4c0,0-2.3-5.2-4.5,3.5C667.1,544.9,400.8,543,400.8,543s-263.6,2-380.8-27.1
                                 c-2.2-8.7-4.3-3.5-4.3-3.5s-23.2,42-8.2,54.9s30.4,21.1,137.2,26.8c99.6,5.3,237.9,7,255.9,7.2v0c0,0,0.3,0,1,0c0.7,0,1,0,1,0v0
                                 c19-0.2,157-1.9,256.6-7.2c106.8-5.6,122.8-13.8,137.7-26.8S788.8,512.4,788.8,512.4z"/>
                         </g>
@@ -162,8 +162,8 @@
                         <path d="M222.9,622.2h8.3c9,0,16.3-7.3,16.3-16.3v-74.8c0-9-7.3-16.3-16.3-16.3h-8.3c-9,0-16.3,7.3-16.3,16.3v74.8
                             C206.6,614.9,213.9,622.2,222.9,622.2z"/>
                         <g>
-                            <circle class="st1" style="fill: #{{sticker.colors[2]}}" cx="645.6" cy="393.3" r="40.2"/>
-                            <circle class="st1" style="fill: #{{sticker.colors[2]}}" cx="158.9" cy="393.3" r="40.2"/>
+                            <circle class="st1" style="fill: #{{sticker.color_2}}" cx="645.6" cy="393.3" r="40.2"/>
+                            <circle class="st1" style="fill: #{{sticker.color_2}}" cx="158.9" cy="393.3" r="40.2"/>
                         </g>
                         <path d="M234.8,246.1c-0.2-1.5-4.7-36.9,29-66.4l3.3,3.8c-31.6,27.7-27.4,61.6-27.3,62L234.8,246.1z"/>
                         <path d="M380.3,244.2c-0.3-0.9-7.3-22.4-4.7-61.3l5,0.3c-2.5,37.8,4.4,59.1,4.5,59.4L380.3,244.2z"/>
@@ -171,7 +171,7 @@
                             c0,0,22.5-3.7,32.7-6.7c7,2.9,27.7,6.7,27.7,6.7l87.9,2.9C520.2,186.2,534,160.2,521.8,157z"/>
                         <path d="M153.5,187.9c0,0-39.1-0.9-44.2-1.6c-5-0.7-7.1,1.4-7.1-20s21-16.8,32.8-17.6s21.4,0,21.4,4s5.1,11.2,5.1,11.2L153.5,187.9z
                             "/>
-                        <path class="st2" style="fill: #{{sticker.colors[1]}}" d="M615.8,103.9c-13.4-48.1-9.3-68.8-79.6-73.9c-60.2-4.4-117.3-4.3-133.9-4.2c-14.4-0.1-74-0.2-134.3,4.2
+                        <path class="st2" style="fill: #{{sticker.color_1}}" d="M615.8,103.9c-13.4-48.1-9.3-68.8-79.6-73.9c-60.2-4.4-117.3-4.3-133.9-4.2c-14.4-0.1-74-0.2-134.3,4.2
                             c-70.3,5.2-66,25.9-79.5,73.9c-13.4,48.1,11.3,42.4,27.8,44.4c15.1,1.8,184.6-0.9,184.6-0.9s171.8,2.7,186.9,0.9
                             C604.4,146.3,629.3,152,615.8,103.9z"/>
                         <path d="M552.2,151.4c-53.4,0-145.9-1.4-151.2-1.5c-6.9,0.1-169.8,2.7-184.9,0.9c-2-0.2-4.2-0.4-6.4-0.5c-8.5-0.5-18.2-1-23.5-8.5
@@ -203,26 +203,26 @@
                         <defs>
                         </defs>
                         <g>
-                            <path class="st0" style="fill: #{{sticker.colors[0]}}" d="M235,317.9h425c0,0,2.5-10.4,6.4-10.4s4.9,5.4,4.9,5.4H885h44v-50c0,0-11.3-7.2-11.9-12.9s9.2-6.6,8.8-12.8
+                            <path class="st0" style="fill: #{{sticker.color_0}}" d="M235,317.9h425c0,0,2.5-10.4,6.4-10.4s4.9,5.4,4.9,5.4H885h44v-50c0,0-11.3-7.2-11.9-12.9s9.2-6.6,8.8-12.8
                                 s-5.3-11.1-5.3-11.1s4.6-9.5-1.8-14.4c-6.4-4.9-15-4.1-15-4.1S834,75.3,833.4,64s1.3-19.2-4.6-23.2c-6-4-26.5-37.2-155.9-37.2
                                 S410.2-4.9,385,24.3c-25.2,29.2-79.6,116.1-79.6,116.1S56.1,119.1,20.9,193.4c2,13.9,2,13.9,2,13.9s4,33.8-2,42.4
                                 c-6,8.6-7.3,20.6,5.3,25.2c12.6,4.6,23.2,31.2,23.2,31.2l4,6.2L235,317.9z"/>
                         </g>
                         <g>
                             <g>
-                                <path class="st1" style="fill: #{{sticker.colors[1]}}" d="M355.5,142.4h149.8c4.6,0,8.3-3.7,8.3-8.3v-77c0-4.6-3.7-8.3-8.2-8.3c-22.2,0-86.6,0.4-99.6,5.3
+                                <path class="st1" style="fill: #{{sticker.color_1}}" d="M355.5,142.4h149.8c4.6,0,8.3-3.7,8.3-8.3v-77c0-4.6-3.7-8.3-8.2-8.3c-22.2,0-86.6,0.4-99.6,5.3
                                     c-16.1,6-58.9,72-63.2,79.3c-2.6,4.3,1.5,6.7,5.3,7.9C350.2,142.1,352.8,142.4,355.5,142.4z"/>
                             </g>
                             <g>
-                                <path class="st1" style="fill: #{{sticker.colors[1]}}" d="M623,50.1c-30-0.8-60.5-1.1-71.8-1.2c-3,0-5.5,2-6.2,5c-4.7,20.3-4.2,88.5,6.5,88.5c6.8,0,41.5,0.1,71.5,0.1
+                                <path class="st1" style="fill: #{{sticker.color_1}}" d="M623,50.1c-30-0.8-60.5-1.1-71.8-1.2c-3,0-5.5,2-6.2,5c-4.7,20.3-4.2,88.5,6.5,88.5c6.8,0,41.5,0.1,71.5,0.1
                                     V50.1z"/>
                             </g>
                             <g>
-                                <path class="st1" style="fill: #{{sticker.colors[1]}}" d="M688.1,54.5c-7.1-2.1-37.1-3.4-63.1-4.3v92.2c19,0,40.7,0,44.1-0.1c9-0.2,20.4-38.9,25.1-55
+                                <path class="st1" style="fill: #{{sticker.color_1}}" d="M688.1,54.5c-7.1-2.1-37.1-3.4-63.1-4.3v92.2c19,0,40.7,0,44.1-0.1c9-0.2,20.4-38.9,25.1-55
                                     C699,71.2,705.7,59.8,688.1,54.5z"/>
                             </g>
                             <g>
-                                <path class="st1" style="fill: #{{sticker.colors[1]}}" d="M758.3,65.2c0,0,32.1-2.5,40.4,18.5c7.7,19.6,25.4,55.1,7.3,55.9c-18.1,0.8-67.8-0.4-82.8,0
+                                <path class="st1" style="fill: #{{sticker.color_1}}" d="M758.3,65.2c0,0,32.1-2.5,40.4,18.5c7.7,19.6,25.4,55.1,7.3,55.9c-18.1,0.8-67.8-0.4-82.8,0
                                     c-15,0.4-3.3-29.3,2-44.1C731.7,77.4,735.3,64.4,758.3,65.2z"/>
                             </g>
                         </g>
@@ -290,13 +290,13 @@
                         </g>
                         <g>
                             <g>
-                                <circle class="st3" style="fill: #{{sticker.colors[2]}}" cx="139.2" cy="332.6" r="41.3"/>
+                                <circle class="st3" style="fill: #{{sticker.color_2}}" cx="139.2" cy="332.6" r="41.3"/>
                             </g>
                             <g>
-                                <circle class="st3" style="fill: #{{sticker.colors[2]}}" cx="745.9" cy="332.6" r="41.3"/>
+                                <circle class="st3" style="fill: #{{sticker.color_2}}" cx="745.9" cy="332.6" r="41.3"/>
                             </g>
                             <g>
-                                <circle class="st3" style="fill: #{{sticker.colors[2]}}" cx="745.9" cy="332.6" r="10.7"/>
+                                <circle class="st3" style="fill: #{{sticker.color_2}}" cx="745.9" cy="332.6" r="10.7"/>
                             </g>
                         </g>
                         <g>
@@ -312,7 +312,7 @@
                     <div class="content">
                         <p>{{sticker.message}}</p>
                         <div class="name">
-                            <span>{{sticker.name}}</span>
+                            <span>{{sticker.username}}</span>
                         </div>
                     </div>
                 </div>
@@ -364,9 +364,6 @@
                 </a>
                 <a href="" class="btn social twitter">
                     <i class="fa fa-twitter"></i>
-                </a>
-                <a href="" class="btn social google">
-                    <i class="fa fa-google"></i>
                 </a>
             </div>
             <div class="panel-cta">
