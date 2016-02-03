@@ -82,7 +82,7 @@
                     <polygon class="yellow" points="0,3 9.1,12.1 0,21.2 3,24.2 12.1,15.2 21.2,24.2 24.2,21.2 15.2,12.1 24.2,3 21.2,0 12.1,9.1 3,0 "/>
                 </svg>
 
-                <p>Revenir à l'acceuil</p>
+                <p>Revenir à l'accueil</p>
             </a>
             <h1>{{pageH1}}</h1>
         </header>
