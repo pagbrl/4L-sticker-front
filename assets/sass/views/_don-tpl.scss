@@ -1,10 +1,9 @@
-.don-template {
-  
+.don-template {  
   position: relative;
   min-width: 100vw;
   min-height: 100vh;
   background: $dark url('../img/bgDon.png') no-repeat center center;
-  background-size: 100% auto;
+  background-size: cover;
   
   .don-go-home {
     font-family: $quicksand;
