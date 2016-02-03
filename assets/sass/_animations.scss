@@ -22,3 +22,7 @@ main.ng-enter {
     0% {opacity: 0; transform: scale(.99)}
     100% {opacity: 1; transform: scale(1)}
 }
+
+.content--right article .caption {
+  transition: opacity ease-in-out 0.3s;
+}

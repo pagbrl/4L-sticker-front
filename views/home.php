@@ -23,8 +23,8 @@
                     <h2>{{day.name}}</h2>
                     <span class="hashtag">#MPGAZL</span>
                 </header>
-                <div class="instagram-flux" ng-repeat="picture in day.pictures">
-                        <article>
+                <div class="instagram-flux">
+                        <article ng-repeat="picture in day.pictures">
                             <a target="_blank" href="{{picture.url}}">
                                 <img ng-src="{{picture.thumbnail_url}}" alt="">
                                 <div class="caption">
