@@ -20,6 +20,7 @@ main.ng-enter {
     100% {opacity: 1; transform: scale(1)}
 }
 
+
 @keyframes fadeOut {
     0% {opacity: 1;}
     100% {opacity: 0;}
@@ -28,4 +29,7 @@ main.ng-enter {
 @keyframes fadeIn {
     0% {opacity: 0;}
     100% {opacity: 1;}
+}
+.content--right article .caption {
+  transition: opacity ease-in-out 0.3s;
 }
