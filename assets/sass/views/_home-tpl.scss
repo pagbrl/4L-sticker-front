@@ -65,6 +65,14 @@
           
           a:last-child {
             margin: 45px 25px 0 30px;
+            
+            @media screen and (min-width: 1200px) and (max-width: 1260px){
+              display: inline-block;
+              vertical-align: -11px;
+              text-align: center;
+              width: 185px;
+            }
+            
           }
           
         }
