@@ -163,7 +163,7 @@ app.controller('stickerCtrl', function($scope, $rootScope) {
 
     // Delete Banned Words from string
     $scope.delBannedWords = function(i,string){
-        var newString = string.replace(bannedWords[i],'');
+        var newString = string.replace(bannedWords[i],'').replace(bannedWords[i].toUpperCase(), ''); 
         return newString;
     }
 
