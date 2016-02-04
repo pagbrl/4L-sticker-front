@@ -21,6 +21,12 @@ app.controller('directDonationCtrl', function($scope, $rootScope) {
     $rootScope.pageTitle = '4L Front | Faire un don';
 });
 
+// direct donation controller
+// app.controller('donationValidationCtrl', function($scope, $rootScope) {
+//     $rootScope.bodyClass = 'page-direct-donation';
+//     $rootScope.pageTitle = '4L Front | Faire un don';
+// });
+
 // create sticker controller
 app.controller('stickerCtrl', function($scope, $rootScope) {
     $rootScope.bodyClass = 'page-sticker';
