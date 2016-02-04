@@ -3,10 +3,10 @@ app.service('instagramService', function($http, $q){
   var JSONurl = "https://api.instagram.com/v1/users/self/feed?access_token=2882344860.1fb234f.e492b874eaf9422db2473717abe5e2e7";
   var promise = $q.defer();
   
-  var tempData = [];
-  var instagramFlux = [];
-  
   this.getInstagramFlux = function(){
+    
+  var tempData = [];
+  var instagramFlux = [];  
     
   $.ajax({
     url: JSONurl,
