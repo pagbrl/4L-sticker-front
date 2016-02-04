@@ -14,8 +14,8 @@ if (isset($_GET["amount"])) {
 $paypal = new Paypal();
 
 $params = array(
-    'RETURNURL' => 'http://4l-front.dev/',
-    'CANCELURL' => 'http://4l-front.dev/don',
+    'RETURNURL' => 'http://4l-front.dev/paypal/doCheckout.php',
+    'CANCELURL' => 'http://4l-front.dev/',
 
     'PAYMENTREQUEST_0_AMT'             => $amount,
     'PAYMENTREQUEST_0_CURRENCYCODE'    => 'EUR'
