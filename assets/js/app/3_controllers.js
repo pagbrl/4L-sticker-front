@@ -180,11 +180,9 @@ app.controller('stickerCtrl', function($scope, $rootScope) {
         switch(view) {
             case "face":
                 $scope.sticker.view = 0;
-                $scope.colorPickerNames = ["Carrosserie","Pare-brise","Phares"];
                 break;
-            case "profil":
+            case "back":
                 $scope.sticker.view = 1;
-                $scope.colorPickerNames = ["Carrosserie","Vitres","Jantes"];
                 break;
         }
     };
