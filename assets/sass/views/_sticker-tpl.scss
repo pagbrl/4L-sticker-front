@@ -350,13 +350,13 @@
             .svg {
                 position: absolute;
                 top: 0;
-                left: -50px;
+                left: 20px;
                 width: 40%;
                 height: 100%;
                 transition: none;
 
-                &.profil {
-                    padding: 15px;
+                &.back {
+                    left: 20px;
                 }
 
                 svg {
@@ -369,7 +369,7 @@
             .content {
                 position: relative;
                 float: right;
-                width: 65%;
+                width: 60%;
                 height: 100%;
                 padding: 30px;
                 transition: none;

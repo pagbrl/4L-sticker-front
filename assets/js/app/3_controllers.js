@@ -21,6 +21,12 @@ app.controller('directDonationCtrl', function($scope, $rootScope) {
     $rootScope.pageTitle = '4L Front | Faire un don';
 });
 
+// direct donation controller
+// app.controller('donationValidationCtrl', function($scope, $rootScope) {
+//     $rootScope.bodyClass = 'page-direct-donation';
+//     $rootScope.pageTitle = '4L Front | Faire un don';
+// });
+
 // create sticker controller
 app.controller('stickerCtrl', function($scope, $rootScope) {
     $rootScope.bodyClass = 'page-sticker';
@@ -157,7 +163,7 @@ app.controller('stickerCtrl', function($scope, $rootScope) {
 
     // Delete Banned Words from string
     $scope.delBannedWords = function(i,string){
-        var newString = string.replace(bannedWords[i],'');
+        var newString = string.replace(bannedWords[i],'').replace(bannedWords[i].toUpperCase(), ''); 
         return newString;
     }
 
@@ -174,11 +180,9 @@ app.controller('stickerCtrl', function($scope, $rootScope) {
         switch(view) {
             case "face":
                 $scope.sticker.view = 0;
-                $scope.colorPickerNames = ["Carrosserie","Pare-brise","Phares"];
                 break;
-            case "profil":
+            case "back":
                 $scope.sticker.view = 1;
-                $scope.colorPickerNames = ["Carrosserie","Vitres","Jantes"];
                 break;
         }
     };

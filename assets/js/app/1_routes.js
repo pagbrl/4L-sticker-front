@@ -27,6 +27,12 @@ app.config(function($routeProvider, $locationProvider) {
             controller: 'stickerCtrl'
         })
 
+        // valid checkout page
+        // .when('/valider', {
+        //     templateUrl: 'views/donationValidation.php',
+        //     controller: 'donationValidationCtrl'
+        // })
+
         // Other pages
         // About page
         .when('/a-propos', {
