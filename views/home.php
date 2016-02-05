@@ -2,7 +2,7 @@
     <div class="content--left">
       <div class="left--container">
         <div class="vCenter">
-          <img src="http://lorempixel.com/300/300">
+            <img src="./assets/img/4lhome.png">
             <div class="left--info">
             <h1>Soutenez l’association Enfants du Désert et participez à l’aventure du 4L Trophy</h1>
             <p>Depuis 11 ans, l’association Enfants du Désert organise le 4L Trophy : tous les ans, c’est plus de 1500 équipages qui sillonnent à bord de leur 4L Xkm de routes et de pistes à travers l’Europe.<br />
