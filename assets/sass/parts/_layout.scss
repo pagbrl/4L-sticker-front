@@ -2,6 +2,10 @@
     box-sizing: border-box;
 }
 
+*::-webkit-scrollbar { 
+    display: none; 
+}
+
 body, html {
     overflow-x: hidden;
     min-height: 100vh;
