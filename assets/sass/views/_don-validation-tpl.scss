@@ -1,0 +1,102 @@
+.don-validation-template {  
+  position: relative;
+  min-width: 100vw;
+  min-height: 100vh;
+  background: $dark url('../img/bgDon.png') no-repeat center center;
+  background-size: cover;
+  
+  .don-go-home {
+    font-family: $quicksand;
+    position: absolute;
+    top: 30px;
+    left: 20px;
+    font-size: 20px;
+
+    a {
+      margin-bottom: 30px;
+      padding-top: 15px;
+
+      svg {
+          display: inline-block;
+          vertical-align: top;
+          height: 22px;
+          width: 22px;
+          margin-right: 20px;
+      }
+
+      p {
+          display: inline-block;
+          vertical-align: top;
+          font-family: $quicksand;
+          font-weight: bold;
+          font-size: 16px;
+          color: $black;
+          height: 22px;
+          line-height: 22px;
+          margin: 0;
+      }
+    }
+  }
+  
+  .don-container {
+    
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate3d(-50%,-50%,0);
+    width: 600px;
+    height: 380px;
+    background-color: $dark2;
+    border-radius: 10px;
+    
+    >div {
+      padding:60px;
+      color: $light;
+      
+      h2 {
+        font-family: $quicksand;
+        font-size: 24px;
+        font-weight: bold;
+        margin: 0 0 35px;
+      }
+      
+      p {
+        color: $grey;
+        font-size: 14px;
+        padding-bottom: 35px;
+        
+        a {
+          color: $light;
+          text-decoration: underline;
+          font-weight: normal;
+        }
+        
+      }
+      
+      .twitter {
+        background-color: #3CF;
+        color: $grey;
+        margin-left: 6px;
+        
+        &:hover {
+          background-color: darken( #3CF, 10% );
+        }
+        
+      }
+      
+      .facebook {
+        background-color : #3b5998;
+        color: $grey;
+        margin-right: 6px;
+        
+        &:hover {
+          background-color: darken( #3b5998, 10% );
+        }
+        
+      }
+      
+      
+      
+    }
+  }
+}
