@@ -313,12 +313,6 @@ app.controller('stickerCtrl', function($scope, $rootScope) {
 
 });
 
-// about controller
-app.controller('aboutCtrl', function($scope, $rootScope) {
-    $rootScope.bodyClass = 'page-about';
-    $rootScope.pageTitle = '4L Front | À propos';
-});
-
 // cgu controller
 app.controller('cguCtrl', function($scope, $rootScope) {
     $rootScope.bodyClass = 'page-cgu';
