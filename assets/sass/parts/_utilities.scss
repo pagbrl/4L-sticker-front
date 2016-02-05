@@ -13,6 +13,7 @@
   transition: all $bezier .25s;
 
   &:hover, &:focus {
+    color: $black;
     background-color: $yellow2;
     transition: all $bezier .25s;
   }
@@ -24,16 +25,32 @@
     color: $light;
     font-size: 120%;
 
+    &:hover {
+      box-shadow: 0 0 45px rgba($black,.2);
+    }
+
     &.facebook {
       background-color: #3b5998;
+
+      &:hover {
+        background: #314C83;
+      }
     }
 
     &.twitter {
       background-color: #55acee;
+
+      &:hover {
+        background: #4895CF;
+      }
     }
 
     &.google {
       background-color: #dc4e41;
+
+      &:hover {
+        background: #C44538;
+      }
     }
   }
 }

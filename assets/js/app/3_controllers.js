@@ -32,7 +32,7 @@ app.controller('donationValidationCtrl', function($scope, $rootScope) {
 });
 
 // create sticker controller
-app.controller('stickerCtrl', function($scope, $rootScope) {
+app.controller('stickerCtrl', function($scope, $rootScope, $http) {
     $rootScope.bodyClass = 'page-sticker';
     $rootScope.pageTitle = '4L Front | Personnalise ton sticker';
     
@@ -300,23 +300,25 @@ app.controller('stickerCtrl', function($scope, $rootScope) {
     // Print sticker 
     $scope.printSticker = function(){
         $scope.setLayout("print");
-
-        // TODO => SEND DATAS TO PAUL
+        $scope.postSticker();
     }
 
     // Download sticker
     $scope.downloadSticker = function(){
         $scope.setLayout("download");
-
-        // TODO => SEND DATAS TO PAUL
+        $scope.postSticker();
     }
 
-});
+    // Send object 
+    $scope.postSticker = function(){
+        $http.post('http://ao.paul.yt/sticker/new', $scope.ticker).then(function(data){
+            console.log(data);
+        }, function(error){
+            console.log(error);
+        });
 
-// about controller
-app.controller('aboutCtrl', function($scope, $rootScope) {
-    $rootScope.bodyClass = 'page-about';
-    $rootScope.pageTitle = '4L Front | À propos';
+    }
+
 });
 
 // cgu controller
