@@ -362,10 +362,10 @@
                 Si vous ne souhaitez pas faire de dons à l'association Enfants du Désert, vous pouvez toujours soutenir Margaux et Pauline en partageant votre sticker sur les réseaux sociaux !
             </p>
             <div class="panel-cta">
-                <a href="" class="btn social facebook">
+                <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A//www.facebook.com/link_website" class="btn social facebook">
                     <i class="fa fa-facebook"></i>
                 </a>
-                <a href="" class="btn social twitter">
+                <a target="_blank" href="https://twitter.com/intent/tweet?text=Je viens de personnaliser mon sticker pour le %234LTrophy de @MPGAZL ! Créez le vôtre ici et prenez part à l'aventure : link_website" class="btn social twitter">
                     <i class="fa fa-twitter"></i>
                 </a>
             </div>
