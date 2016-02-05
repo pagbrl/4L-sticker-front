@@ -28,10 +28,10 @@ app.config(function($routeProvider, $locationProvider) {
         })
 
         // valid checkout page
-        // .when('/valider', {
-        //     templateUrl: 'views/donationValidation.php',
-        //     controller: 'donationValidationCtrl'
-        // })
+        .when('/valider', {
+            templateUrl: 'views/donationValidation.php',
+            controller: 'donationValidationCtrl'
+        })
 
         // Other pages
         // CGU page
