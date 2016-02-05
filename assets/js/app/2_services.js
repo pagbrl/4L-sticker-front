@@ -11,6 +11,7 @@ app.service('instagramService', function($http, $q){
     
   $http.jsonp(JSONurl)
     .success(function (response, status) {
+      console.log(response.data);
       for (var i = 0; i < response.data.length; i++){
         // Les variables ci-dessous permettent de bien mettre la date
         var postedTime = response.data[i].created_time;
@@ -30,6 +31,7 @@ app.service('instagramService', function($http, $q){
               url: response.data[i].link,
               thumbnail_url: response.data[i].images.standard_resolution.url,
               desc: response.data[i].caption.text,
+              type: response.data[i].type,
               }
             ]
           }
@@ -41,6 +43,7 @@ app.service('instagramService', function($http, $q){
                 url: response.data[i].link,
                 thumbnail_url: response.data[i].images.standard_resolution.url,
                 desc: "",
+                type: response.data[i].type,
               }
             ]
           }
