@@ -1,20 +1,18 @@
 <section class="don-template">
   <div class="don-go-home">
-  <a href="./">
-    <svg width="30px" height="30px" viewBox="0 0 25 25" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
-    <!-- Generator: Sketch 3.4.4 (17249) - http://www.bohemiancoding.com/sketch -->
-      <title>Rectangle 34</title>
-      <desc>Created with Sketch.</desc>
-      <defs></defs>
-      <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
-          <g id="Don-sans-sticker" sketch:type="MSArtboardGroup" transform="translate(-29.000000, -26.000000)" fill="#FFC600">
-              <g id="Cross" sketch:type="MSLayerGroup" transform="translate(41.213203, 38.213203) rotate(-315.000000) translate(-41.213203, -38.213203) translate(26.213203, 23.213203)">
-                  <path d="M17.1428571,12.8571429 L17.1428571,4.26325641e-14 L12.8571429,4.26325641e-14 L12.8571429,12.8571429 L4.26325641e-14,12.8571429 L4.26325641e-14,17.1428571 L12.8571429,17.1428571 L12.8571429,30 L17.1428571,30 L17.1428571,17.1428571 L30,17.1428571 L30,12.8571429 L17.1428571,12.8571429 Z" id="Rectangle-34" sketch:type="MSShapeGroup"></path>
-              </g>
-          </g>
-      </g>
+  <a class="btn" href="./">
+    <svg version="1.1"
+         xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"
+         x="0px" y="0px" width="24.2px" height="24.2px" viewBox="0 0 24.2 24.2" style="enable-background:new 0 0 24.2 24.2;"
+         xml:space="preserve">
+        <style type="text/css">
+            .yellow{fill:#000;}
+        </style>
+        <defs>
+        </defs>
+        <polygon class="yellow" points="0,3 9.1,12.1 0,21.2 3,24.2 12.1,15.2 21.2,24.2 24.2,21.2 15.2,12.1 24.2,3 21.2,0 12.1,9.1 3,0 "/>
     </svg>
-    <span>Revenir à l'accueil</span>
+    <p>Revenir à l'accueil</p>
   </a>
   </div>
   <div class="don-container">

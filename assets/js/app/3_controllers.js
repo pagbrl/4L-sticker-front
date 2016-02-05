@@ -240,7 +240,7 @@ app.controller('stickerCtrl', function($scope, $rootScope) {
     $scope.setStickerStyle = function(){
         var sticker = $('#sticker-custom');
         var stickerWidth = sticker.width();
-        var stickerHeight = stickerWidth/2.10;
+        var stickerHeight = stickerWidth/2.108;
         
         // Set scale 
         var stickerContentScale = stickerWidth / 700;
