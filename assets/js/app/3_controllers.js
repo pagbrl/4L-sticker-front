@@ -11,7 +11,11 @@ app.controller('mainCtrl', function($scope, $location) {
 app.controller('homeCtrl', function($scope, $rootScope, instagramService) {
     $rootScope.bodyClass = 'page-home';
     $rootScope.pageTitle = '4L Front';
-    $scope.instagramFlux = instagramService.getInstagramFlux();
+    $scope.instagramFlux = instagramService.getInstagramFlux().then(function(getData){            
+            $scope.instagramFlux = getData;
+          }, function(msg){ // si promise reject
+            $scope.userInfo = msg;
+    }); 
 
 });
 
