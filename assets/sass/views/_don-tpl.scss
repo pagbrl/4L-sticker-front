@@ -11,34 +11,31 @@
     top: 30px;
     left: 20px;
     font-size: 20px;
-    
+
     a {
-      color: $light;
-      transition: color ease-in-out 0.3s;
-      
-      g#Don-sans-sticker{
-        transition: fill ease-in-out 0.3s;
+      margin-bottom: 30px;
+      padding-top: 15px;
+
+      svg {
+          display: inline-block;
+          vertical-align: top;
+          height: 22px;
+          width: 22px;
+          margin-right: 20px;
       }
-      
-      &:hover {
-        color: $yellow;
-        
-        g#Don-sans-sticker{
-          fill: $grey;
-        }
+
+      p {
+          display: inline-block;
+          vertical-align: top;
+          font-family: $quicksand;
+          font-weight: bold;
+          font-size: 16px;
+          color: $black;
+          height: 22px;
+          line-height: 22px;
+          margin: 0;
       }
-      
-      span {
-        vertical-align: 8px;
-      }
-      
     }
-    
-    svg {
-      margin-right: 15px;
-    }
-    
-    
   }
   
   .don-container {
