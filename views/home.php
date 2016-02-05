@@ -14,6 +14,10 @@
             <a href="/don">Faire un don à enfant du désert</a>
           </div>
         </div>
+
+        <footer class="main-footer">
+            <p>Copyright <?php echo date('Y'); ?> | <a href="/CGU">CGU</a></p>
+        </footer>
       </div>
     </div>
     <div class="content--right">

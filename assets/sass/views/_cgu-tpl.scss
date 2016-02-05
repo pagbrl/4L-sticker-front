@@ -1,0 +1,47 @@
+.cgu-template {
+    width: 100%;
+    min-height: 100vh;
+    background: $light;
+
+    .container {
+        max-width: 800px;
+        width: 100%;
+        margin: 0 auto;
+        padding: 50px 15px;
+    }
+
+    h1 {
+        font-family: $quicksand;
+        text-transform: uppercase;
+    }
+
+    h2 {
+        font-family: $quicksand;
+        margin-bottom: 0;
+    }
+
+    article {
+        margin-bottom: 40px;
+
+        p {
+            margin-top: 5px;
+        }
+    }
+
+    .btn {
+        margin-right: 20px;
+        
+        i,p {
+            display: inline-block;
+            vertical-align: top;
+            height: 50px;
+            line-height: 50px;
+            margin: 0;
+        }
+
+        i {
+            font-size: 20px;
+            margin-right: 10px;
+        }
+    }
+}

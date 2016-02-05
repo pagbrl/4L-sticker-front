@@ -49,6 +49,12 @@ a {
 	color: $yellow;
 	text-decoration: none;
 	font-weight: bold;
+    transition: all ease .25s;
+
+    &:hover {
+        color: $yellow2;
+        transition: all ease .25s;
+    }
 }
 
 section.responsive {

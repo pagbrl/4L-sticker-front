@@ -34,12 +34,6 @@ app.config(function($routeProvider, $locationProvider) {
         // })
 
         // Other pages
-        // About page
-        .when('/a-propos', {
-            templateUrl: 'views/about.php',
-            controller: 'aboutCtrl'
-        })
-
         // CGU page
         .when('/CGU', {
             templateUrl: 'views/cgu.php',

@@ -12,6 +12,31 @@
         background: url('../img/bgHome.png');
         background-size: cover;
         padding: 0 30px;
+
+      footer.main-footer {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 40px;
+        color: $light;
+        text-align: center;
+
+        p {
+          line-height: 40px;
+          margin: 0;
+        }
+
+        a {
+          color: $light;
+          text-decoration: underline;
+          font-weight: normal;
+
+          &:hover {
+            color: $light;
+          }
+        }
+      }
       
       .left--container {
         margin: 0 auto;
@@ -127,7 +152,11 @@
             display: block;
           }
         }
-          
+        
+        .right-scrollable-zone > div:last-child {
+          margin-bottom: 80px;
+        }
+
     }
 
     .right-scrollable-zone {
@@ -136,6 +165,7 @@
         padding-top: 40px;
         max-height: calc(100vh);
         overflow-y: scroll;
+        overflow-x: hidden;
       
         .instagram-flux article:first-of-type{
           width: 100%;
