@@ -1,12 +1,12 @@
 // app.js
 
 // define our application and pull in ngRoute
-var app = angular.module('app', ['ngRoute', 'ngAnimate']);
+var app = angular.module('app', ['ngRoute', 'ngAnimate', 'loadingService']);
 
 // ROUTING ===============================================
 // set our routing for this application
 // each route will pull in a different controller
-app.config(function($routeProvider, $locationProvider) {
+app.config(function($routeProvider, $locationProvider, $httpProvider) {
 
     $routeProvider
         // home page
@@ -44,4 +44,26 @@ app.config(function($routeProvider, $locationProvider) {
 
     // use the HTML5 History API
     $locationProvider.html5Mode(true);
+
+    // Loading site
+    $httpProvider.responseInterceptors.push('myHttpInterceptor');
+    var spinnerFunction = function (data, headers) {
+        return data;
+    };
+    $httpProvider.defaults.transformRequest.push(spinnerFunction);
+});
+
+// Module loading http request
+angular.module('loadingService', [], function ($provide) {
+    $provide.factory('myHttpInterceptor', function ($q, $window) {
+        return function (promise) {
+            return promise.then(function (response) {
+                $('section#loadingSite').fadeOut();
+                return response;
+            }, function (response) {
+                $('section#loadingSite').fadeOut();
+                return $q.reject(response);
+            });
+        };
+    });
 });
