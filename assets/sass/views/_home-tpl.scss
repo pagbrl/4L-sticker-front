@@ -44,11 +44,11 @@
         max-width: 900px;
         padding: 0 30px;
         height:100vh;
+        display: table;
         
         .vCenter {
-          height: 100%;
-          display:inline-block;
-          vertical-align:top;
+          display:table-cell;
+          vertical-align: middle;
         }
         
         .vCenter:before {
@@ -58,19 +58,37 @@
           height:100%; 
         }
         
-        img {
-          max-width: 300px;
+        .left--info{
+          float: left;
           width: 25%;
+          text-align: center;
           vertical-align:middle;
-          display:inline-block;
-          border-radius: 50%;
-          background: white;
+          margin-top: 20%;
+          transform:translate3d(0,-20%,0);
+          img {
+            max-width: 100%;
+            
+            display:inline-block;
+            border-radius: 50%;
+            background: white;
+          }
+
+          span{
+            margin-top: 10px;
+            text-align: center;
+            display: inline-block;
+            font-style: italic;
+            color:$light;
+            font-family: $roboto;
+
+          }
         }
         
-        .left--info {
+        .right--info {
           max-width: 520px;
-          width: 65%;
-          margin-left: 60px;
+          width: 75%;
+          float: left;
+          padding-left: 60px;
           vertical-align:middle;
           display:inline-block;
           
