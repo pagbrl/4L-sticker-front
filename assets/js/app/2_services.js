@@ -1,8 +1,8 @@
 app.service('instagramService', function($http, $q){
   
-  var JSONurl = "https://api.instagram.com/v1/users/self/feed?access_token=2882344860.1fb234f.e492b874eaf9422db2473717abe5e2e7&callback=JSON_CALLBACK";
+  var JSONurl = "https://api.instagram.com/v1/users/self/media/recent?access_token=49302374.1677ed0.a0934522f1e6488f868d4663bb97665d&callback=JSON_CALLBACK";
 
-  var instagramFlux = [];  
+  var instagramFlux = [];
 
   this.getInstagramFlux = function(){
     
@@ -15,10 +15,9 @@ app.service('instagramService', function($http, $q){
         // Les variables ci-dessous permettent de bien mettre la date
         var postedTime = response.data[i].created_time;
         var pubDate = new Date(postedTime * 1000);
-        var m_names = new Array("Janvier", "Février", "Mars", 
-"Avril", "Mai", "Juin", "Juillet", "Aout", "Septembre", 
-"Octobre", "Novembrer", "Décembre");  
-        var curr_day = pubDate.getDay();
+        console.log(pubDate);
+        var m_names =["Janvier", "Février", "Mars", "Avril", "Mai", "Juin", "Juillet", "Août", "Septembre", "Octobre", "Novembre", "Décembre"]; 
+        var curr_day = pubDate.getDate();
         var curr_month = pubDate.getMonth();
         
         // Si la photo à une description ou non
@@ -47,6 +46,7 @@ app.service('instagramService', function($http, $q){
             ]
           }
         }
+
         
       }; // fin du for
 
@@ -75,7 +75,7 @@ app.service('instagramService', function($http, $q){
     .error(function(response, status){
       defered.reject('Impossible de recuperer les articles') // promesse raté
     });
-        return defered.promise;  
+      return defered.promise;  
     };
   
 });
