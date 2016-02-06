@@ -10,7 +10,7 @@ app.controller('mainCtrl', function($scope, $location) {
 // home page controller
 app.controller('homeCtrl', function($scope, $rootScope, instagramService) {
     $rootScope.bodyClass = 'page-home';
-    $rootScope.pageTitle = '4L Front';
+    $rootScope.pageTitle = "MP GAZ'L";
     $scope.instagramFlux = instagramService.getInstagramFlux().then(function(getData){            
             $scope.instagramFlux = getData;
           }, function(msg){ // si promise reject
@@ -22,19 +22,19 @@ app.controller('homeCtrl', function($scope, $rootScope, instagramService) {
 // direct donation controller
 app.controller('directDonationCtrl', function($scope, $rootScope) {
     $rootScope.bodyClass = 'page-direct-donation';
-    $rootScope.pageTitle = '4L Front | Faire un don';
+    $rootScope.pageTitle = "MP GAZ'L | Faire un don";
 });
 
 // direct donation controller
 app.controller('donationValidationCtrl', function($scope, $rootScope) {
     $rootScope.bodyClass = 'page-direct-donation';
-    $rootScope.pageTitle = '4L Front | Faire un don';
+    $rootScope.pageTitle = "MP GAZ'L | Faire un don";
 });
 
 // create sticker controller
 app.controller('stickerCtrl', function($scope, $rootScope, $http) {
     $rootScope.bodyClass = 'page-sticker';
-    $rootScope.pageTitle = '4L Front | Personnalise ton sticker';
+    $rootScope.pageTitle = "MP GAZ'L | Personnalise ton sticker";
     
     // Init sticker obejct
     $scope.sticker = {
@@ -326,5 +326,5 @@ app.controller('stickerCtrl', function($scope, $rootScope, $http) {
 // cgu controller
 app.controller('cguCtrl', function($scope, $rootScope) {
     $rootScope.bodyClass = 'page-cgu';
-    $rootScope.pageTitle = '4L Front | CGU';
+    $rootScope.pageTitle = "MP GAZ'L | CGU";
 });
