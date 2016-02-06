@@ -16,7 +16,7 @@
         </div>
 
         <footer class="main-footer">
-            <p>Copyright <?php echo date('Y'); ?> | <a href="/CGU">CGU</a></p>
+            <p>Copyright <?php echo date('Y'); ?> | <a target="_blank" href="/CGU">CGU</a></p>
         </footer>
       </div>
     </div>
