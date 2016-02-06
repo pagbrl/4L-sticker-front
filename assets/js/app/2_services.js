@@ -41,7 +41,7 @@ app.service('instagramService', function($http, $q){
               {
                 url: response.data[i].link,
                 thumbnail_url: response.data[i].images.standard_resolution.url,
-                desc: "",
+                desc: "Aucune description",
                 type: response.data[i].type,
               }
             ]
