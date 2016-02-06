@@ -309,7 +309,7 @@ app.controller('stickerCtrl', function($scope, $rootScope, $http) {
 
     // Send object 
     $scope.postStickerThenChangeLayout = function(layout){
-        $http.post('http://ao.paul.yt/sticker/new', $scope.ticker).then(function(data){
+        $http.post('http://ao.paul.yt/api/sticker/new', $scope.ticker).then(function(data){
             console.log("data :");
             console.log(data);
             $scope.setLayout(layout);
