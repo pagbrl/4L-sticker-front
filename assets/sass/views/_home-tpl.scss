@@ -258,7 +258,7 @@
               width: calc(100% - 20px);
               height: 20%;
               text-align: center;
-              background: linear-gradient(to top, black, rgba(255,0,0,0));
+              background: linear-gradient(to top, rgba(0,0,0,1), rgba(0,0,0,0));
               
               
               &:nth-child(even){
