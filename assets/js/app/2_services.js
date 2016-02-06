@@ -1,6 +1,6 @@
 app.service('instagramService', function($http, $q){
   
-    var JSONurl = "https://api.instagram.com/v1/users/self/feed?access_token=2882344860.1fb234f.e492b874eaf9422db2473717abe5e2e7&callback=JSON_CALLBACK";
+  var JSONurl = "https://api.instagram.com/v1/users/self/feed?access_token=2882344860.1fb234f.e492b874eaf9422db2473717abe5e2e7&callback=JSON_CALLBACK";
 
   var instagramFlux = [];  
 
@@ -11,7 +11,6 @@ app.service('instagramService', function($http, $q){
     
   $http.jsonp(JSONurl)
     .success(function (response, status) {
-      console.log(response.data);
       for (var i = 0; i < response.data.length; i++){
         // Les variables ci-dessous permettent de bien mettre la date
         var postedTime = response.data[i].created_time;
@@ -71,7 +70,6 @@ app.service('instagramService', function($http, $q){
           instagramFlux.push(tempData[i]);
         }
       }
-      console.log(instagramFlux);
       defered.resolve(instagramFlux);
     })
     .error(function(response, status){

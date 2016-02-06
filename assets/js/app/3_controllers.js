@@ -299,21 +299,23 @@ app.controller('stickerCtrl', function($scope, $rootScope, $http) {
 
     // Print sticker 
     $scope.printSticker = function(){
-        $scope.setLayout("print");
-        $scope.postSticker();
+        $scope.postStickerThenChangeLayout("print");
     }
 
     // Download sticker
     $scope.downloadSticker = function(){
-        $scope.setLayout("download");
-        $scope.postSticker();
+        $scope.postStickerThenChangeLayout("download");
     }
 
     // Send object 
-    $scope.postSticker = function(){
-        $http.post('http://ao.paul.yt/sticker/new', $scope.ticker).then(function(data){
+    $scope.postStickerThenChangeLayout = function(layout){
+        $http.defaults.headers.post['Access-Control-Allow-Credentials'] = 'true';
+        $http.post('http://ao.paul.yt/api/sticker/new', $scope.ticker,{ withCredentials: true }).then(function(data){
+            console.log("data :");
             console.log(data);
+            $scope.setLayout(layout);
         }, function(error){
+            console.log("error :");
             console.log(error);
         });
 
