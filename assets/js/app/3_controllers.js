@@ -311,8 +311,7 @@ app.controller('stickerCtrl', function($scope, $rootScope, $http) {
     $scope.postStickerThenChangeLayout = function(layout){
         $http.defaults.headers.post['Access-Control-Allow-Credentials'] = 'true';
         $http.post('http://ao.paul.yt/api/sticker/new', $scope.sticker,{ withCredentials: true }).then(function(data){
-            console.log("data :");
-            console.log(data);
+            $scope.stickerID = data.data.id;
             $scope.setLayout(layout);
         }, function(error){
             console.log("error :");
