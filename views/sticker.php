@@ -359,7 +359,7 @@
                 <!-- <input name="notify_url" type="hidden" value="http://ao.paul.yt/api/donation/new"/> -->
                 <input name="cmd" type="hidden" value="_xclick" />
                 <input name="business" type="hidden" value="paulgabriel7-facilitator-1@gmail.com" />
-                <input name="custom" type="hidden" value="{{stickerID}}" />su
+                <input name="custom" type="hidden" value="{{stickerID}}" />
               </div>
               <input type="submit" value="Faire un don" class="btn">
             </form>
