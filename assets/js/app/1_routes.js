@@ -28,7 +28,7 @@ app.config(function($routeProvider, $locationProvider, $httpProvider) {
         })
 
         // valid checkout page
-        .when('/valider', {
+        .when('/merci', {
             templateUrl: 'views/donationValidation.php',
             controller: 'donationValidationCtrl'
         })

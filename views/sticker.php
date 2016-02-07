@@ -345,13 +345,21 @@
             <p>
                 Pour prendre part à l’aventure de Pauline et Margaux, soutenez l’association. Pour tout don supérieur à 3€ votre sticker sera imprimé par l’équipage sur place et collé sur la 4L !
             </p>
-            <form action="./paypal/requestCheckout.php" method="GET">
+            <form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post">
               <div class="panel-cta">
                 <div class="amount-input">
                   <label for="amount">Montant</label>
                   <input type="number" name="amount" id="amount" min="0" placeholder="3,00">
                   <span>€</span>
                 </div>
+                <input name="cancel_return" type="hidden" value="http://4ltrophy.paul.yt" />
+                <input name="item_name" type="hidden" value="Les Enfants Du Désert" />
+                <input name="currency_code" type="hidden" value="EUR" />
+                <input name="return" type="hidden" value="http://4ltrophy.paul.yt/merci" />
+                <!-- <input name="notify_url" type="hidden" value="http://ao.paul.yt/api/donation/new"/> -->
+                <input name="cmd" type="hidden" value="_xclick" />
+                <input name="business" type="hidden" value="paulgabriel7-facilitator-1@gmail.com" />
+                <input name="custom" type="hidden" value="{{stickerID}}" />su
               </div>
               <input type="submit" value="Faire un don" class="btn">
             </form>
