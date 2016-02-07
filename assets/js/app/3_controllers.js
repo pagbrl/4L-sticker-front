@@ -326,6 +326,26 @@ app.controller('stickerCtrl', function($scope, $rootScope, $http) {
     var canvas = document.getElementById('drawsticker');
     var ctx = canvas.getContext('2d');
 
+    $scope.canvasTextWrap = function(context, text, x, y, maxWidth, lineHeight) {
+        var words = text.split(' ');
+        var line = '';
+
+        for(var n = 0; n < words.length; n++) {
+          var testLine = line + words[n] + ' ';
+          var metrics = context.measureText(testLine);
+          var testWidth = metrics.width;
+          if (testWidth > maxWidth && n > 0) {
+            context.fillText(line, x, y);
+            line = words[n] + ' ';
+            y += lineHeight;
+          }
+          else {
+            line = testLine;
+          }
+        }
+        context.fillText(line, x, y);
+      }
+
     $scope.doCanvas = function(){
         ctx.fillStyle = '#FFF';
         ctx.fillRect(0, 0, canvas.width, canvas.height);
@@ -334,7 +354,8 @@ app.controller('stickerCtrl', function($scope, $rootScope, $http) {
         ctx.fillStyle = '#000';
         ctx.font = '22px Roboto';
         ctx.textAlign = 'left';
-        ctx.fillText($scope.sticker.message, 310, 60);
+        var message = $scope.sticker.message;
+        $scope.canvasTextWrap(ctx, message, 310, 60, 360, 36);
         ctx.font = 'bold 35px Quicksand';
         ctx.textAlign = 'right';
         ctx.fillText($scope.sticker.username.toUpperCase(), 665, 290);
