@@ -214,8 +214,6 @@ app.controller('stickerCtrl', function($scope, $rootScope, $http) {
                 $scope.sticker[picker] = "FFFFFF";
                 break;
         }
-
-        console.log($scope.sticker);
     };
 
     $scope.chooseMessage = function(){
@@ -319,6 +317,8 @@ app.controller('stickerCtrl', function($scope, $rootScope, $http) {
         });
 
     }
+
+    // Draw img 
 
 });
 

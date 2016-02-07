@@ -15,7 +15,6 @@ app.service('instagramService', function($http, $q){
         // Les variables ci-dessous permettent de bien mettre la date
         var postedTime = response.data[i].created_time;
         var pubDate = new Date(postedTime * 1000);
-        console.log(pubDate);
         var m_names =["Janvier", "Février", "Mars", "Avril", "Mai", "Juin", "Juillet", "Août", "Septembre", "Octobre", "Novembre", "Décembre"]; 
         var curr_day = pubDate.getDate();
         var curr_month = pubDate.getMonth();
