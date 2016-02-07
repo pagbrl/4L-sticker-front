@@ -370,7 +370,7 @@
                 </a>
             </div>
             <div class="panel-cta">
-                <a id="downloadSticker" href="" class="btn secondary">
+                <a id="downloadSticker" ng-click="downloadStickerAction()" href="" class="btn secondary">
                     Télécharger
                 </a>
             </div>

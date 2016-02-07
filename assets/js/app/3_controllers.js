@@ -1497,13 +1497,13 @@ app.controller('stickerCtrl', function($scope, $rootScope, $http) {
         };
     }
 
-    // // Download img
-    // $scope.downloadStickerAction = function(filename){
-    //     var link = $('#downloadSticker');
-    //     link.href = document.getElementById('drawsticker').toDataURL();
-    //     link.download = filename;
-    // }
-
+    // Download img
+    $scope.downloadStickerAction = function(){
+        var link = $('#downloadSticker');
+        link.href = document.getElementById('drawsticker').toDataURL();
+        link.download = 'sticker.png';
+        Canvas2Image.saveAsPNG(canvas, 700, 332);
+    }
 });
 
 // cgu controller
