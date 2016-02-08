@@ -26,7 +26,6 @@ clone the repository and run
 
 ```
 npm install
-
 ```
 Then, launch gulp to track changes and compile files.
 
