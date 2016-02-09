@@ -9,8 +9,8 @@
             <div class="right--info">
                 <h1>Soutenez l’association a et participez à l’aventure du 4L Trophy</h1>
 
-                <p>Depuis 11 ans, l’association <a href="">Enfants du Désert</a> organise le <a href="">4L Trophy</a> : tous les ans, c’est plus de 1500 équipages qui sillonnent à bord de leur 4L 6300km de routes et de pistes à travers l’Europe.<br />
-                Le 18 Février, <a href="">Pauline & Margaux</a> sont parties le coffre rempli de fournitures scolaire qu’elles distribueront aux enfants marocains pendant 10 jours. Prenez part à leur aventure !</p>
+                <p>Depuis 11 ans, l’association <a target="_blank" href="http://enfantsdudesert.org/">Enfants du Désert</a> organise le <a target="_blank" href="http://www.4ltrophy.com/">4L Trophy</a> : tous les ans, c’est plus de 1500 équipages qui sillonnent à bord de leur 4L 6300km de routes et de pistes à travers l’Europe.<br />
+                Le 18 Février, <a target="_blank" href="https://www.facebook.com/mpgazl?__mref=message_bubble">Pauline & Margaux</a> sont parties le coffre rempli de fournitures scolaire qu’elles distribueront aux enfants marocains pendant 10 jours. Prenez part à leur aventure !</p>
 
                 <p>Pour participer, deux solutions : créez votre 4L personnalisée et affichez-la accompagnée d’un petit message sur la voiture de l’équipage. Vous pouvez également soutenir directement l’association en faisant un don.</p>
 
