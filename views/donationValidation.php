@@ -18,7 +18,7 @@
   <div class="don-container">
     <div>
       <h2>Merci de votre don</h2>
-      <p>L'association Enfants du Désert ainsi que Pauline et Margaux vous remercient pour votre don de X€.</p>
+      <p>L'association Enfants du Désert ainsi que Pauline et Margaux vous remercient pour votre don.</p>
       <div class="don-input-btn panel-cta">
         <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A//www.facebook.com/link_website" class="btn facebook"><i class="fa fa-facebook"></i><p>Partager sur Facebook</p></a>
         <a href="https://twitter.com/intent/tweet?text=J'ai soutenu l'association Enfants du Désert en faisant un don ! Vous aussi, aidez-là à développer l'éducation au Maroc : link_website" class="btn twitter"><i class="fa fa-twitter"></i><p>Partager sur Twitter</p></a>

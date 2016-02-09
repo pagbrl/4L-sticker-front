@@ -23,6 +23,7 @@ $params = array(
 $token = $paypal->request('SetExpressCheckout', $params);   
 if ($token) {
     $url = "https://www.sandbox.paypal.com/webscr?cmd=_express-checkout&useraction=commit&token=". $token;
+    // echo $token;
     header("Location: $url");
     exit;
 }

@@ -1,6 +1,6 @@
 app.service('instagramService', function($http, $q){
   
-  var JSONurl = "https://api.instagram.com/v1/users/self/media/recent?access_token=49302374.1677ed0.a0934522f1e6488f868d4663bb97665d&callback=JSON_CALLBACK";
+  var JSONurl = "https://api.instagram.com/v1/users/self/media/recent?access_token=1961010849.1677ed0.0c00830b172d48f482fdb8202408cca8&callback=JSON_CALLBACK";
 
   var instagramFlux = [];
 

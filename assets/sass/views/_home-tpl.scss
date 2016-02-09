@@ -102,6 +102,12 @@
           
           p {
             color: $grey;
+
+            > a {
+              color: $light;
+              text-decoration: underline;
+              margin: 0 !important;
+            }
           }
           
           .btn {
