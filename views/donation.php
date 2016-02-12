@@ -19,7 +19,7 @@
     <div>
       <h2>Faire un don à Enfants du Désert</h2>
       <p>
-        L’association <a href="#">Enfants du désert</a> agi depuis 2005 pour faciliter l’accès à l’éducation des enfants du sud Marocain.<br />
+        L’association <a href="#">Enfants du désert</a> agit depuis 2005 pour faciliter l’accès à l’éducation des enfants du sud Marocain.<br />
   Votre don permettra de financer divers projets comme la construction d’écoles ou l’amélioration des conditions médicales des jeunes marocains.
       </p>
       <div class="don-input-btn">
